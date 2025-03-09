@@ -1,3 +1,4 @@
+
 QT += gui
 
 QT += network
@@ -19,3 +20,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     mytcpserver.h
+
+
+QT += sql
+
