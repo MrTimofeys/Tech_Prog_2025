@@ -1,4 +1,3 @@
-
 #include "mytcpserver.h"
 #include <QDebug>
 #include <QCoreApplication>

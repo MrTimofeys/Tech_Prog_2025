@@ -1,7 +1,5 @@
 #ifndef MYTCPSERVER_H
 #define MYTCPSERVER_H
-
-
 #include <QObject>
 #include <QTcpServer>
 #include <QTcpSocket>
@@ -24,7 +22,6 @@ public slots:
     void slotNewConnection();
     void slotClientDisconnected();
     void slotServerRead();
-
 
 private:
     QTcpServer * mTcpServer;
