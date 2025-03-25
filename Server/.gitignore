@@ -1,0 +1,9 @@
+# Qt и сборка
+build*/
+*.pro.user
+*.pro.user.*
+qtc_clangd/
+
+# Системные файлы
+.DS_Store
+*.autosave
