@@ -1,9 +1,11 @@
+
 #include "mytcpserver.h"
 #include <QDebug>
 #include <QCoreApplication>
 #include <QString>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include "equationsolver.h"
 
 MyTcpServer::~MyTcpServer()
 {
@@ -91,8 +93,21 @@ void MyTcpServer::slotServerRead() {
         } else {
             responseJson["message"] = "Invalid username or password.";
         }
+    } else if (command == "solve") {
+        double x0 = json["x0"].toDouble();
+        double tolerance = json["tolerance"].toDouble();
+        int maxIterations = json["maxIterations"].toInt();
+
+        double root = equationSolver::solveIterationMethod(mathFunc, x0, tolerance, maxIterations);
+
+        if (!std::isnan(root)) {
+            responseJson["root"] = root;
+            responseJson["message"] = "Solution found";
+        } else {
+            responseJson["message"] = "No convergence";
+        }
     } else {
-        responseJson["message"] = "Unknown command.";
+        responseJson["message"] = "Unknown command";
     }
 
     QJsonDocument responseDoc(responseJson);
@@ -147,4 +162,6 @@ bool MyTcpServer::authenticateUser(const QString &username, const QString &passw
     QString storedHashedPassword = query.value(0).toString();
     return storedHashedPassword == hashPassword(password);
 }
+
+
 
