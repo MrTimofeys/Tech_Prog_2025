@@ -22,6 +22,9 @@ private slots:
 
     void on_pushButton_reg_clicked();
 
+    void handleLoginResult(bool success, const QString& message);
+    void handleRegistrationResult(bool success, const QString& message);
+
 signals:
     void auth_ok(QString);
 

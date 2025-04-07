@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,13 +13,17 @@ SOURCES += \
     funcsforclient.cpp \
     main.cpp \
     formsmanager.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    clientmanager.cpp \
+    homewindow.cpp
 
 HEADERS += \
     authregform.h \
     formsmanager.h \
     funcsforclient.h \
-    mainwindow.h
+    mainwindow.h \
+    clientmanager.h \
+    homewindow.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -28,4 +32,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 FORMS += \
     authregform.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    homewindow.ui
