@@ -20,7 +20,8 @@ public:
     static ClientManager* getInstance();
     static void destroyInstance();
 
-    bool connectToServer(const QString& host = "localhost", quint16 port = 33333);
+    // bool connectToServer(const QString& host = "localhost", quint16 port = 33333);
+    bool connectToServer(const QString& host = "77.222.47.216", quint16 port = 33333);
     void disconnectFromServer();
     bool isConnected() const;
 
