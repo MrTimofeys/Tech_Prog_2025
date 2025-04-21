@@ -25,4 +25,4 @@ HEADERS += \
 
 
 QT += sql
-
+QT += concurrent

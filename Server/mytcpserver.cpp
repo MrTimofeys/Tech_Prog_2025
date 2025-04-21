@@ -6,6 +6,10 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include "equationsolver.h"
+#include <QRandomGenerator>
+#include <QSslSocket>
+#include <QByteArray>
+#include <QtConcurrent>
 
 MyTcpServer::~MyTcpServer()
 {
@@ -51,7 +55,7 @@ void MyTcpServer::setupDatabase() {
     if (!query.exec(createTableSQL)) {
         qDebug() << "Ошибка создания таблицы:" << query.lastError().text();
     } else {
-        qDebug() << "Таблица users готова!";
+        qDebug() << "Таблица готова!";
     }
 }
 
@@ -106,7 +110,38 @@ void MyTcpServer::slotServerRead() {
         } else {
             responseJson["message"] = "No convergence";
         }
-    } else {
+    } else if (command == "send_code") {
+        QString email = getEmailByUsername(username);
+
+        if (email.isEmpty()) {
+            responseJson["message"] = "Error: Email not found for this username.";
+        } else {
+            QString verificationCode = generateRandomCode(6);
+
+            responseJson["message"] = "Verification code sent to email!";
+            responseJson["code"] = verificationCode; // Убери в релизе
+
+            // Отправка кода в фоне
+            QtConcurrent::run([=]() {
+                sendEmail(email, verificationCode);
+            });
+        }
+
+    } else if (command == "update_password") {
+        QString newPassword = password;
+
+        // Логируем перед обновлением пароля
+        qDebug() << "Updating password for username:" << username;
+        qDebug() << "New password:" << newPassword;
+
+        if (updateUserPassword(username, newPassword)) {
+            responseJson["message"] = "Password updated successfully!";
+        } else {
+            responseJson["message"] = "Failed to update password.";
+        }
+    }
+
+    else {
         responseJson["message"] = "Unknown command";
     }
 
@@ -163,5 +198,83 @@ bool MyTcpServer::authenticateUser(const QString &username, const QString &passw
     return storedHashedPassword == hashPassword(password);
 }
 
+void MyTcpServer::sendEmail(const QString &to, const QString &code) {
+    QSslSocket socket;
 
+    socket.connectToHostEncrypted("smtp.yandex.ru", 465);
+    if (!socket.waitForEncrypted(3000)) {
+        qDebug() << "SSL handshake failed:" << socket.errorString();
+        return;
+    }
+
+    auto write = [&](const QString &data) {
+        socket.write((data + "\r\n").toUtf8());
+        if (!socket.waitForBytesWritten(3000)) {
+            qDebug() << "Write failed:" << socket.errorString();
+            return false;
+        }
+        if (!socket.waitForReadyRead(3000)) {
+            qDebug() << "No response:" << socket.errorString();
+            return false;
+        }
+        qDebug() << "Server:" << socket.readAll();
+        return true;
+    };
+
+    write("EHLO yandex.ru");
+    write("AUTH LOGIN");
+    write(QByteArray("timp2025@yandex.ru").toBase64());
+    write(QByteArray("metvfuyxyekxuqzr").toBase64());
+    write("MAIL FROM: <timp2025@yandex.ru>");
+    write("RCPT TO:<" + to + ">");
+    write("DATA");
+    write("From: MyApp <timp2025@yandex.ru>");
+    write("To: " + to);
+    write("Subject: Verification Code");
+    write("");
+    write("Your verification code: " + code);
+    write(".");
+    write("QUIT");
+}
+QString MyTcpServer::generateRandomCode(int length) {
+    const QString possibleCharacters("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789");
+    QString code;
+    for (int i = 0; i < length; ++i) {
+        int index = QRandomGenerator::global()->bounded(possibleCharacters.length());
+        code.append(possibleCharacters.at(index));
+    }
+    return code;
+}
+
+bool MyTcpServer::updateUserPassword(const QString &username, const QString &newPassword) {
+    QString hashedPassword = hashPassword(newPassword);
+
+    QSqlQuery query;
+    query.prepare("UPDATE users SET password = :password WHERE username = :username");
+    query.bindValue(":password", hashedPassword);
+    query.bindValue(":username", username);
+
+    if (!query.exec()) {
+        qDebug() << "Failed to update password:" << query.lastError().text();
+        return false;
+    }
+
+    if (query.numRowsAffected() == 0) {
+        qDebug() << "No user found with username:" << username;
+        return false;
+    }
+
+    return true;
+}
+QString MyTcpServer::getEmailByUsername(const QString &username) {
+    QSqlQuery query;
+    query.prepare("SELECT email FROM users WHERE username = :username");
+    query.bindValue(":username", username);
+
+    if (query.exec() && query.next()) {
+        return query.value(0).toString();
+    }
+
+    return QString();
+}
 

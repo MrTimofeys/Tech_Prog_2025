@@ -38,6 +38,11 @@ private:
     QString hashPassword(const QString &password);
 
     static double mathFunc(double x){return cos(x);}
+    void sendEmail(const QString &to, const QString &code);
+    QString generateRandomCode(int length);
+    bool updateUserPassword(const QString &username, const QString &newPassword);
+    QString getEmailByUsername(const QString &username) ;
+
 };
 
 #endif // MYTCPSERVER_H
