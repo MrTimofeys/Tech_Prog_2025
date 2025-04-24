@@ -1,5 +1,7 @@
 #ifndef MYTCPSERVER_H
 #define MYTCPSERVER_H
+
+
 #include <QObject>
 #include <QTcpServer>
 #include <QTcpSocket>
@@ -10,6 +12,7 @@
 #include <QtSql/QSqlQuery>
 #include <QtSql/QSqlError>
 #include <QCryptographicHash>
+#include "equationsolver.h"
 
 
 class MyTcpServer : public QObject
@@ -23,6 +26,7 @@ public slots:
     void slotClientDisconnected();
     void slotServerRead();
 
+
 private:
     QTcpServer * mTcpServer;
     QList<QTcpSocket*> mClients;
@@ -32,6 +36,12 @@ private:
     bool registerUser(const QString &username, const QString &password, const QString &email);
     bool authenticateUser(const QString &username, const QString &password);
     QString hashPassword(const QString &password);
+
+    static double mathFunc(double x){return cos(x);}
+    void sendEmail(const QString &to, const QString &code);
+    QString generateRandomCode(int length);
+    bool updateUserPassword(const QString &username, const QString &newPassword);
+    QString getEmailByUsername(const QString &username) ;
 
 };
 
