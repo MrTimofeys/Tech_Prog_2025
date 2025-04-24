@@ -92,6 +92,38 @@ bool ClientManager::loginUser(const QString& username, const QString& password)
     return true;
 }
 
+bool ClientManager::sendVerificationCode(const QString& username)
+{
+    if (!isConnected()) {
+        emit verificationCodeResult(false, "Not connected to server");
+        return false;
+    }
+
+    QJsonObject request;
+    request["command"] = "send_code";
+    request["username"] = username;
+
+    sendRequest(request);
+    return true;
+}
+
+bool ClientManager::resetPassword(const QString& username, const QString& code, const QString& newPassword)
+{
+    if (!isConnected()) {
+        emit passwordResetResult(false, "Not connected to server");
+        return false;
+    }
+
+    QJsonObject request;
+    request["command"] = "reset_password";
+    request["username"] = username;
+    request["code"] = code;
+    request["password"] = newPassword;
+
+    sendRequest(request);
+    return true;
+}
+
 void ClientManager::onConnected()
 {
     emit connectionStatusChanged(true);
@@ -129,10 +161,20 @@ void ClientManager::processResponse(const QJsonObject& response)
 {
     QString message = response["message"].toString();
     
-    if (message.contains("registered successfully")) {
+    if (message.contains("Verification code sent")) {
+        emit verificationCodeResult(true, message);
+    } else if (message.contains("Password updated successfully")) {
+        emit passwordResetResult(true, message);
+    } else if (message.contains("registered successfully")) {
         emit registrationResult(true, message);
     } else if (message.contains("Error")) {
-        emit registrationResult(false, message);
+        if (message.contains("verification code")) {
+            emit verificationCodeResult(false, message);
+        } else if (message.contains("password")) {
+            emit passwordResetResult(false, message);
+        } else {
+            emit registrationResult(false, message);
+        }
     } else if (message.contains("Login successful")) {
         emit loginResult(true, message);
     } else if (message.contains("Invalid")) {
