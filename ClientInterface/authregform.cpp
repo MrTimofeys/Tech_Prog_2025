@@ -176,13 +176,21 @@ void AuthRegForm::on_pushButton_reset_password_clicked()
 
 void AuthRegForm::on_pushButton_cancel_reset_clicked()
 {
+    ClientManager* client = ClientManager::getInstance();
+    client->clearStoredVerificationCode();
     showPasswordResetForm(false);
     clearPasswordResetForm();
 }
 
 void AuthRegForm::handleVerificationCodeResult(bool success, const QString& message)
 {
-    ui->label_test_status->setText(message);
+    ClientManager* client = ClientManager::getInstance();
+    if (success) {
+        // Показываем сообщение вместе с кодом для тестирования
+        //ui->label_test_status->setText(message + " Code: " + client->getStoredVerificationCode());
+    } else {
+        ui->label_test_status->setText(message);
+    }
 }
 
 void AuthRegForm::handlePasswordResetResult(bool success, const QString& message)

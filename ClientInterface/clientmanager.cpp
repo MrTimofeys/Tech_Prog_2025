@@ -22,6 +22,7 @@ void ClientManager::destroyInstance()
 ClientManager::ClientManager(QObject *parent)
     : QObject(parent)
     , socket(new QTcpSocket(this))
+    , storedVerificationCode("")
 {
     connect(socket, &QTcpSocket::connected, this, &ClientManager::onConnected);
     connect(socket, &QTcpSocket::disconnected, this, &ClientManager::onDisconnected);
@@ -114,10 +115,14 @@ bool ClientManager::resetPassword(const QString& username, const QString& code, 
         return false;
     }
 
+    if (code != storedVerificationCode) {
+        emit passwordResetResult(false, "Invalid verification code");
+        return false;
+    }
+
     QJsonObject request;
-    request["command"] = "reset_password";
+    request["command"] = "update_password";
     request["username"] = username;
-    request["code"] = code;
     request["password"] = newPassword;
 
     sendRequest(request);
@@ -162,8 +167,10 @@ void ClientManager::processResponse(const QJsonObject& response)
     QString message = response["message"].toString();
     
     if (message.contains("Verification code sent")) {
+        storedVerificationCode = response["code"].toString();
         emit verificationCodeResult(true, message);
     } else if (message.contains("Password updated successfully")) {
+        storedVerificationCode.clear();
         emit passwordResetResult(true, message);
     } else if (message.contains("registered successfully")) {
         emit registrationResult(true, message);
