@@ -4,10 +4,12 @@
 #include "clientmanager.h"
 #include "homewindow.h"
 #include <QMessageBox>
+#include <QTimer>
 
 AuthRegForm::AuthRegForm(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::AuthRegForm)
+    , isRequestInProgress(false)
 {
     ui->setupUi(this);
     change_enter_type(false);
@@ -23,6 +25,11 @@ AuthRegForm::AuthRegForm(QWidget *parent)
 
 AuthRegForm::~AuthRegForm()
 {
+    ClientManager* client = ClientManager::getInstance();
+    disconnect(client, &ClientManager::loginResult, this, &AuthRegForm::handleLoginResult);
+    disconnect(client, &ClientManager::registrationResult, this, &AuthRegForm::handleRegistrationResult);
+    disconnect(client, &ClientManager::verificationCodeResult, this, &AuthRegForm::handleVerificationCodeResult);
+    disconnect(client, &ClientManager::passwordResetResult, this, &AuthRegForm::handlePasswordResetResult);
     delete ui;
 }
 
@@ -139,6 +146,11 @@ void AuthRegForm::on_pushButton_forgot_password_clicked()
 
 void AuthRegForm::on_pushButton_send_code_clicked()
 {
+    if (isRequestInProgress) {
+        ui->label_test_status->setText("Please wait, code is being sent...");
+        return;
+    }
+    
     QString username = ui->lineEdit_login->text();
     
     if (username.isEmpty()) {
@@ -147,8 +159,14 @@ void AuthRegForm::on_pushButton_send_code_clicked()
     }
     
     ClientManager* client = ClientManager::getInstance();
+    isRequestInProgress = true;
     client->sendVerificationCode(username);
     ui->label_test_status->setText("Sending verification code...");
+    
+    // Сбрасываем флаг через небольшую задержку
+    QTimer::singleShot(3000, this, [this]() {
+        isRequestInProgress = false;
+    });
 }
 
 void AuthRegForm::on_pushButton_reset_password_clicked()
@@ -184,13 +202,20 @@ void AuthRegForm::on_pushButton_cancel_reset_clicked()
 
 void AuthRegForm::handleVerificationCodeResult(bool success, const QString& message)
 {
+    static bool isHandling = false;
+    
+    if (isHandling) return;
+    
+    isHandling = true;
     ClientManager* client = ClientManager::getInstance();
     if (success) {
-        // Показываем сообщение вместе с кодом для тестирования
-        //ui->label_test_status->setText(message + " Code: " + client->getStoredVerificationCode());
+        // ui->label_test_status->setText(message + " Code: " + client->getStoredVerificationCode());
+        ui->label_test_status->setText(message);
     } else {
         ui->label_test_status->setText(message);
     }
+    isRequestInProgress = false;
+    isHandling = false;
 }
 
 void AuthRegForm::handlePasswordResetResult(bool success, const QString& message)

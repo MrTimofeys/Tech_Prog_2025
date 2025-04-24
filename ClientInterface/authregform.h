@@ -2,6 +2,7 @@
 #define AUTHREGFORM_H
 
 #include <QDialog>
+#include <QTimer>
 
 namespace Ui {
 class AuthRegForm;
@@ -37,7 +38,7 @@ signals:
 
 private:
     Ui::AuthRegForm *ui;
-
+    bool isRequestInProgress;
     void change_enter_type(bool);
     void clear_form();
 
