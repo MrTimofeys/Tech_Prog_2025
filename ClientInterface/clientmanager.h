@@ -13,6 +13,7 @@ class ClientManager : public QObject
 private:
     static ClientManager* instance;
     QTcpSocket* socket;
+    QString storedVerificationCode;
     explicit ClientManager(QObject *parent = nullptr);
     ~ClientManager();
 
@@ -28,10 +29,19 @@ public:
     bool registerUser(const QString& username, const QString& password, const QString& email);
     bool loginUser(const QString& username, const QString& password);
 
+    // Новые методы для восстановления пароля
+    bool sendVerificationCode(const QString& username);
+    bool resetPassword(const QString& username, const QString& code, const QString& newPassword);
+
+    void clearStoredVerificationCode() { storedVerificationCode.clear(); }
+    QString getStoredVerificationCode() const { return storedVerificationCode; }
+
 signals:
     void connectionStatusChanged(bool connected);
     void registrationResult(bool success, const QString& message);
     void loginResult(bool success, const QString& message);
+    void verificationCodeResult(bool success, const QString& message);
+    void passwordResetResult(bool success, const QString& message);
 
 private slots:
     void onConnected();
