@@ -47,12 +47,12 @@
          </item>
          <item>
           <property name="text">
-           <string>(x² + 6)/2</string>
+           <string>(x² + 6)/5</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>cos(x) - 5</string>
+           <string>0.5 * cos(x)</string>
           </property>
          </item>
         </widget>

@@ -18,7 +18,7 @@ HomeWindow::HomeWindow(QWidget *parent)
     , currentPhi(phi_exp) // По умолчанию используем exp(-x)
 {
     ui->setupUi(this);
-    this->setWindowTitle("Решение уравнений");
+    this->setWindowTitle("Решение уравнений методом последовательных приближений");
     
     // Устанавливаем значения по умолчанию
     updateInitialValue(0); // Устанавливаем начальные значения для exp(-x)
@@ -35,14 +35,14 @@ void HomeWindow::updateInitialValue(int functionIndex)
 {
     switch(functionIndex) {
         case 0: // exp(-x)
-            ui->lineEdit_x0->setText("1.0");
+            ui->lineEdit_x0->setText("0.0");
             currentPhi = phi_exp;
             break;
-        case 1: // (x² + 6)/2
-            ui->lineEdit_x0->setText("2.0");
+        case 1: // (x² + 6)/5
+            ui->lineEdit_x0->setText("1.0");
             currentPhi = phi_quadratic;
             break;
-        case 2: // cos(x) - 5
+        case 2: // 0.5 * cos(x)
             ui->lineEdit_x0->setText("0.0");
             currentPhi = phi_cos;
             break;

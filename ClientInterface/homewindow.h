@@ -33,8 +33,8 @@ private:
     
     // Функции для решения
     static double phi_exp(double x) { return exp(-x); }
-    static double phi_quadratic(double x) { return (x*x + 6.0) / 2.0; }
-    static double phi_cos(double x) { return cos(x) - 5.0; }
+    static double phi_quadratic(double x) { return (x*x + 6.0) / 5.0; }
+    static double phi_cos(double x) { return 0.5 * cos(x); }
     
     // Указатель на текущую функцию
     double (*currentPhi)(double);
