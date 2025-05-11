@@ -11,18 +11,83 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Home</string>
+   <string>Решение уравнений</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QLabel" name="label_welcome">
       <property name="text">
-       <string>Welcome to Home Window!</string>
+       <string>Решение уравнения методом итераций</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_input">
+      <property name="title">
+       <string>Входные параметры</string>
+      </property>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_x0">
+         <property name="text">
+          <string>Начальное приближение (x0):</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEdit_x0"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_tolerance">
+         <property name="text">
+          <string>Точность:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEdit_tolerance"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_maxIter">
+         <property name="text">
+          <string>Макс. число итераций:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineEdit_maxIter"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_solve">
+      <property name="text">
+       <string>Решить уравнение</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_result">
+      <property name="title">
+       <string>Результат</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_result">
+         <property name="text">
+          <string>Результат будет отображен здесь</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>
