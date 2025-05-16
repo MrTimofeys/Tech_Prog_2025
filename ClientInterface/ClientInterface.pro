@@ -16,7 +16,7 @@ SOURCES += \
     mainwindow.cpp \
     clientmanager.cpp \
     homewindow.cpp \
-    equationsolver.cpp
+    equationsolver.cpp \
 
 HEADERS += \
     authregform.h \
