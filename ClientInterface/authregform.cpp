@@ -12,6 +12,9 @@ AuthRegForm::AuthRegForm(QWidget *parent)
     , isRequestInProgress(false)
 {
     ui->setupUi(this);
+
+    this->setWindowTitle("Аутентификация / Регистрация");
+
     change_enter_type(false);
     showPasswordResetForm(false);
     
