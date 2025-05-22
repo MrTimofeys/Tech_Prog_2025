@@ -21,7 +21,9 @@ MyTcpServer::~MyTcpServer()
     db.close();
 }
 
-MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent) {
+MyTcpServer::MyTcpServer(QObject *parent, bool testMode)
+    : QObject(parent)
+{
     mTcpServer = new QTcpServer(this);
 
     connect(mTcpServer, &QTcpServer::newConnection,
@@ -33,8 +35,26 @@ MyTcpServer::MyTcpServer(QObject *parent) : QObject(parent) {
         qDebug() << "server is started";
     }
 
-    setupDatabase();
+    db = QSqlDatabase::addDatabase("QSQLITE");
+
+    if (testMode) {
+        db.setDatabaseName("test_users.db");
+    } else {
+        db.setDatabaseName("users.db");
+    }
+
+    if (!db.open()) {
+        qDebug() << "Database is not open!" << db.lastError();
+        return;
+    }
+
+    QSqlQuery query(db);
+    query.exec("CREATE TABLE IF NOT EXISTS users ("
+               "username TEXT PRIMARY KEY, "
+               "password TEXT, "
+               "email TEXT)");
 }
+
 
 void MyTcpServer::setupDatabase() {
     db = QSqlDatabase::addDatabase("QSQLITE");
@@ -119,9 +139,8 @@ void MyTcpServer::slotServerRead() {
             QString verificationCode = generateRandomCode(6);
 
             responseJson["message"] = "Verification code sent to email!";
-            responseJson["code"] = verificationCode; // Убери в релизе
+            responseJson["code"] = verificationCode;
 
-            // Отправка кода в фоне
             QtConcurrent::run([=]() {
                 sendEmail(email, verificationCode);
             });
@@ -130,7 +149,6 @@ void MyTcpServer::slotServerRead() {
     } else if (command == "update_password") {
         QString newPassword = password;
 
-        // Логируем перед обновлением пароля
         qDebug() << "Updating password for username:" << username;
         qDebug() << "New password:" << newPassword;
 

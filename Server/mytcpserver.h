@@ -19,8 +19,9 @@ class MyTcpServer : public QObject
 {
     Q_OBJECT
 public:
-    explicit MyTcpServer(QObject *parent = nullptr);
+    explicit MyTcpServer(QObject *parent = nullptr, bool testMode = false);
     ~MyTcpServer();
+    friend class TestMyTcpServer;
 public slots:
     void slotNewConnection();
     void slotClientDisconnected();
@@ -42,6 +43,7 @@ private:
     QString generateRandomCode(int length);
     bool updateUserPassword(const QString &username, const QString &newPassword);
     QString getEmailByUsername(const QString &username) ;
+    friend class TestMyTcpServer;
 
 };
 
