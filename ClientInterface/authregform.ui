@@ -92,13 +92,21 @@
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="lineEdit_password"/>
+     <widget class="QLineEdit" name="lineEdit_password">
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
     </item>
     <item row="3" column="1">
      <widget class="QLineEdit" name="lineEdit_email"/>
     </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="lineEdit_password_reapet"/>
+     <widget class="QLineEdit" name="lineEdit_password_reapet">
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
     </item>
     <item row="0" column="1">
      <widget class="QLineEdit" name="lineEdit_login"/>
@@ -274,4 +282,10 @@
    </hints>
   </connection>
  </connections>
+ <slots>
+  <slot>on_pushButton_forgot_password_clicked()</slot>
+  <slot>on_pushButton_send_code_clicked()</slot>
+  <slot>on_pushButton_reset_password_clicked()</slot>
+  <slot>on_pushButton_cancel_reset_clicked()</slot>
+ </slots>
 </ui>
