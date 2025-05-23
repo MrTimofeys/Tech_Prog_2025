@@ -1,11 +1,15 @@
 #ifndef EQUATIONSOLVER_H
 #define EQUATIONSOLVER_H
 
-class equationSolver
-{
+#include <QString>
+
+class equationSolver {
 public:
-    equationSolver();
-    static double solveIterationMethod(double (*phi)(double), double x0, double tolerance, int maxIterations);
+    static double solveIterationMethod(const QString &funcName, double x0, double tolerance, int maxIterations);
+
+    static double phi_exp(double x);
+    static double phi_quadratic(double x);
+    static double phi_cos(double x);
 };
 
 #endif // EQUATIONSOLVER_H
