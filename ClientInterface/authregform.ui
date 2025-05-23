@@ -150,49 +150,66 @@
    </property>
    <layout class="QFormLayout" name="resetPasswordLayout">
     <item row="0" column="0">
+     <widget class="QLabel" name="label_reset_username">
+      <property name="text">
+       <string>Username</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="lineEdit_reset_username"/>
+    </item>
+    <item row="1" column="0">
      <widget class="QLabel" name="label_verification_code">
       <property name="text">
        <string>Verification Code</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="1">
+    <item row="1" column="1">
      <widget class="QLineEdit" name="lineEdit_verification_code"/>
     </item>
-    <item row="1" column="0">
+    <item row="2" column="0">
      <widget class="QLabel" name="label_new_password">
       <property name="text">
        <string>New Password</string>
       </property>
      </widget>
     </item>
-    <item row="1" column="1">
+    <item row="2" column="1">
      <widget class="QLineEdit" name="lineEdit_new_password">
       <property name="echoMode">
        <enum>QLineEdit::Password</enum>
       </property>
      </widget>
     </item>
-    <item row="2" column="0">
+    <item row="3" column="0">
      <widget class="QLabel" name="label_confirm_new_password">
       <property name="text">
        <string>Confirm New Password</string>
       </property>
      </widget>
     </item>
-    <item row="2" column="1">
+    <item row="3" column="1">
      <widget class="QLineEdit" name="lineEdit_confirm_new_password">
       <property name="echoMode">
        <enum>QLineEdit::Password</enum>
       </property>
      </widget>
     </item>
-    <item row="3" column="1">
+    <item row="4" column="1">
      <layout class="QHBoxLayout" name="resetPasswordButtonsLayout">
       <item>
        <widget class="QPushButton" name="pushButton_send_code">
         <property name="text">
          <string>Send Code</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_verify_code">
+        <property name="text">
+         <string>Verify Code</string>
         </property>
        </widget>
       </item>
@@ -281,11 +298,28 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_verify_code</sender>
+   <signal>clicked()</signal>
+   <receiver>AuthRegForm</receiver>
+   <slot>on_pushButton_verify_code_clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>on_pushButton_forgot_password_clicked()</slot>
   <slot>on_pushButton_send_code_clicked()</slot>
   <slot>on_pushButton_reset_password_clicked()</slot>
   <slot>on_pushButton_cancel_reset_clicked()</slot>
+  <slot>on_pushButton_verify_code_clicked()</slot>
  </slots>
 </ui>
