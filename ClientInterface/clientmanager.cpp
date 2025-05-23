@@ -177,7 +177,17 @@ void ClientManager::sendRequest(const QJsonObject& request)
 {
     QJsonDocument doc(request);
     QByteArray data = doc.toJson();
-    socket->write(data);
+    qint64 bytesWritten = socket->write(data);
+    if (bytesWritten == -1) {
+        qDebug() << "Failed to write data to socket";
+        emit connectionStatusChanged(false);
+        return;
+    }
+    if (!socket->waitForBytesWritten(5000)) {
+        qDebug() << "Timeout while writing data to socket";
+        emit connectionStatusChanged(false);
+        return;
+    }
     socket->flush();
 }
 

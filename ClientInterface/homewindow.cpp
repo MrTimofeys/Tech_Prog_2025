@@ -15,7 +15,7 @@ double phi(double x) {
 HomeWindow::HomeWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::HomeWindow)
-    , currentPhi(phi_exp) // По умолчанию используем exp(-x)
+    , currentPhi(&HomeWindow::phi_exp) // По умолчанию используем exp(-x)
 {
     ui->setupUi(this);
     this->setWindowTitle("Решение уравнений методом последовательных приближений");
@@ -39,15 +39,15 @@ void HomeWindow::updateInitialValue(int functionIndex)
     switch(functionIndex) {
         case 0: // exp(-x)
             ui->lineEdit_x0->setText("0.0");
-            currentPhi = phi_exp;
+            currentPhi = &HomeWindow::phi_exp;
             break;
         case 1: // (x² + 6)/5
             ui->lineEdit_x0->setText("1.0");
-            currentPhi = phi_quadratic;
+            currentPhi = &HomeWindow::phi_quadratic;
             break;
         case 2: // 0.5 * cos(x)
             ui->lineEdit_x0->setText("0.0");
-            currentPhi = phi_cos;
+            currentPhi = &HomeWindow::phi_cos;
             break;
     }
 }
@@ -120,7 +120,22 @@ void HomeWindow::on_pushButton_solve_clicked()
         return;
     }
 
-    ClientManager::getInstance()->solveEquation("phi_exp", x0, tolerance, maxIterations);
+    QString functionName;
+    switch(ui->comboBox_function->currentIndex()) {
+        case 0:
+            functionName = "phi_exp";
+            break;
+        case 1:
+            functionName = "phi_quadratic";
+            break;
+        case 2:
+            functionName = "phi_cos";
+            break;
+        default:
+            functionName = "phi_exp";
+    }
+
+    ClientManager::getInstance()->solveEquation(functionName, x0, tolerance, maxIterations);
     ui->label_result->setText("Выполняется вычисление...");
 }
 

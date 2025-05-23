@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include <cmath>
 #include "equationsolver.h"
+#include "clientmanager.h"
 
 using namespace std;
 

@@ -20,10 +20,10 @@ private:
 public:
     static ClientManager* getInstance();
     static void destroyInstance();
-    bool ClientManager::solveEquation(const QString &functionName,
-                                      double x0,
-                                      double tolerance,
-                                      int maxIterations);
+    bool solveEquation(const QString &functionName,
+                      double x0,
+                      double tolerance,
+                      int maxIterations);
     // bool connectToServer(const QString& host = "localhost", quint16 port = 33333);
     bool connectToServer(const QString& host = "77.222.47.216", quint16 port = 33333);
     void disconnectFromServer();
