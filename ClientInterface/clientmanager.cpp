@@ -60,6 +60,25 @@ bool ClientManager::isConnected() const
     return socket->state() == QAbstractSocket::ConnectedState;
 }
 
+bool ClientManager::solveEquation(const QString& functionName, double x0, double tolerance, int maxIterations)
+{
+    if (!isConnected()) {
+        qDebug() << "Not connected to server";
+        return false;
+    }
+
+    QJsonObject request;
+    request["command"] = "solve";
+    request["function"] = functionName;
+    request["x0"] = x0;
+    request["tolerance"] = tolerance;
+    request["maxIterations"] = maxIterations;
+
+    sendRequest(request);
+    return true;
+}
+
+
 bool ClientManager::registerUser(const QString& username, const QString& password, const QString& email)
 {
     if (!isConnected()) {
@@ -186,5 +205,13 @@ void ClientManager::processResponse(const QJsonObject& response)
         emit loginResult(true, message);
     } else if (message.contains("Invalid")) {
         emit loginResult(false, message);
+    } else if (response.contains("root")) {
+        double root = response["root"].toDouble();
+        message = response["message"].toString();
+        qDebug() << "Root found:" << root << "-" << message;
+        emit equationSolved(true, root, message); // Предполагается, что вы создадите такой сигнал
+    } else if (response["message"].toString().contains("No convergence")) {
+        emit equationSolved(false, 0.0, response["message"].toString());
     }
+
 } 

@@ -24,6 +24,9 @@ HomeWindow::HomeWindow(QWidget *parent)
     updateInitialValue(0); // Устанавливаем начальные значения для exp(-x)
     ui->lineEdit_tolerance->setText("0.0001");
     ui->lineEdit_maxIter->setText("100");
+
+    connect(ClientManager::getInstance(), &ClientManager::equationSolved,
+            this, &HomeWindow::onEquationSolved);
 }
 
 HomeWindow::~HomeWindow()
@@ -82,23 +85,51 @@ bool HomeWindow::validateInput(double &x0, double &tolerance, int &maxIterations
     return true;
 }
 
+// void HomeWindow::on_pushButton_solve_clicked()
+// {
+//     double x0, tolerance;
+//     int maxIterations;
+    
+//     // Проверяем корректность ввода
+//     if (!validateInput(x0, tolerance, maxIterations)) {
+//         return;
+//     }
+    
+//     // Решаем уравнение
+//     double result = solver.solveIterationMethod(currentPhi, x0, tolerance, maxIterations);
+    
+//     // Выводим результат
+//     if (std::isnan(result)) {
+//         ui->label_result->setText("Решение не найдено за указанное число итераций");
+//     } else {
+//         ui->label_result->setText(QString("Решение: x = %1").arg(result, 0, 'g', 10));
+//     }
+// }
+
 void HomeWindow::on_pushButton_solve_clicked()
 {
     double x0, tolerance;
     int maxIterations;
-    
-    // Проверяем корректность ввода
+
     if (!validateInput(x0, tolerance, maxIterations)) {
         return;
     }
-    
-    // Решаем уравнение
-    double result = solver.solveIterationMethod(currentPhi, x0, tolerance, maxIterations);
-    
-    // Выводим результат
-    if (std::isnan(result)) {
-        ui->label_result->setText("Решение не найдено за указанное число итераций");
-    } else {
-        ui->label_result->setText(QString("Решение: x = %1").arg(result, 0, 'g', 10));
+
+    if (!ClientManager::getInstance()->isConnected()) {
+        ui->label_result->setText("Нет подключения к серверу.");
+        return;
     }
-} 
+
+    ClientManager::getInstance()->solveEquation("phi_exp", x0, tolerance, maxIterations);
+    ui->label_result->setText("Выполняется вычисление...");
+}
+
+void HomeWindow::onEquationSolved(bool success, double root, const QString& message)
+{
+    if (success) {
+        ui->label_result->setText(QString("Решение: x = %1").arg(root, 0, 'g', 10));
+    } else {
+        ui->label_result->setText("Ошибка: " + message);
+    }
+}
+
