@@ -117,20 +117,21 @@ void MyTcpServer::slotServerRead() {
         } else {
             responseJson["message"] = "Invalid username or password.";
         }
-    } else if (command == "solve") {
-        double x0 = json["x0"].toDouble();
-        double tolerance = json["tolerance"].toDouble();
-        int maxIterations = json["maxIterations"].toInt();
+    }  else if (command == "solve") {
+    QString funcName = json["function"].toString();
+    double x0 = json["x0"].toDouble();
+    double tolerance = json["tolerance"].toDouble();
+    int maxIterations = json["maxIterations"].toInt();
 
-        double root = equationSolver::solveIterationMethod(mathFunc, x0, tolerance, maxIterations);
+    double root = equationSolver::solveIterationMethod(funcName, x0, tolerance, maxIterations);
 
-        if (!std::isnan(root)) {
-            responseJson["root"] = root;
-            responseJson["message"] = "Solution found";
-        } else {
-            responseJson["message"] = "No convergence";
-        }
-    } else if (command == "send_code") {
+    if (!std::isnan(root)) {
+        responseJson["root"] = root;
+        responseJson["message"] = "Solution found";
+    } else {
+        responseJson["message"] = "No convergence or invalid function name";
+    }
+} else if (command == "send_code") {
         QString email = getEmailByUsername(username);
 
         if (email.isEmpty()) {
