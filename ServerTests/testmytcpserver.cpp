@@ -58,8 +58,16 @@ void TestMyTcpServer::testMathFunc() {
 }
 
 void TestMyTcpServer::testSolveEquation() {
-    double result = equationSolver::solveIterationMethod(MyTcpServer::mathFunc, 0.0, 1.0, 100);
-    QVERIFY(result >= 0.0 && result <= 1.0);
+    QString functionName = "phi_quadratic";
+    double x0 = 1.0;
+    double tolerance = 1e-6;
+    int maxIterations = 100;
+
+    double result = equationSolver::solveIterationMethod(functionName, x0, tolerance, maxIterations);
+
+    qDebug() << "Результат:" << result;
+    QVERIFY(!std::isnan(result));
+    QVERIFY(result >= 1.5 && result <= 2.6);
 }
 
 
