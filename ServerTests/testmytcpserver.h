@@ -1,9 +1,12 @@
+// testmytcpserver.h
 #ifndef TESTMYTCPSERVER_H
 #define TESTMYTCPSERVER_H
 
 #include <QObject>
 #include <QtTest>
-#include "C:/Users/redmi/Desktop/Tech_Prog_2025/Server/mytcpserver.h"
+#include "databasemanager.h"
+#include "mytcpserver.h"
+#include "equationsolver.h"
 
 class TestMyTcpServer : public QObject
 {
@@ -23,7 +26,6 @@ private slots:
     void testGenerateRandomCodeUniqueness();
     void testFailedAuthentication();
     void testDuplicateUsernameRegistration();
-    void testMathFunc();
     void testSolveEquation();
 };
 
