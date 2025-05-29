@@ -5,6 +5,7 @@
 #include "homewindow.h"
 #include <QMessageBox>
 #include <QTimer>
+#include <QDebug>
 
 AuthRegForm::AuthRegForm(QWidget *parent)
     : QDialog(parent)
@@ -24,6 +25,12 @@ AuthRegForm::AuthRegForm(QWidget *parent)
     connect(client, &ClientManager::registrationResult, this, &AuthRegForm::handleRegistrationResult);
     connect(client, &ClientManager::verificationCodeResult, this, &AuthRegForm::handleVerificationCodeResult);
     connect(client, &ClientManager::passwordResetResult, this, &AuthRegForm::handlePasswordResetResult);
+    connect(client, &ClientManager::connectionStatusChanged, this, &AuthRegForm::handleConnectionStatus);
+
+    // Пробуем подключиться к серверу при запуске
+    if (!client->isConnected()) {
+        client->connectToServer();
+    }
 }
 
 AuthRegForm::~AuthRegForm()
@@ -72,6 +79,15 @@ void AuthRegForm::on_pushButton_auth_clicked()
         return;
     }
     
+    ClientManager* client = ClientManager::getInstance();
+    if (!client->isConnected()) {
+        qDebug() << "Not connected to server, attempting to connect...";
+        if (!client->connectToServer()) {
+            ui->label_test_status->setText("Cannot connect to server. Please try again later.");
+            return;
+        }
+    }
+    
     ui->label_test_status->setText("Authenticating...");
     auth(login, password);
 }
@@ -106,7 +122,8 @@ void AuthRegForm::handleLoginResult(bool success, const QString& message)
         this->close();
     } else {
         ui->label_test_status->setText("Authentication failed: " + message);
-        clear_form();
+        // Очищаем только поле пароля, оставляя логин
+        ui->lineEdit_password->clear();
     }
 }
 
@@ -130,9 +147,26 @@ void AuthRegForm::showPasswordResetForm(bool show)
     
     if (show) {
         ui->label_header->setText("Password Reset");
+        // Копируем логин из основной формы
+        ui->lineEdit_reset_username->setText(ui->lineEdit_login->text());
+        // Скрываем поля для нового пароля при первом показе формы
+        ui->lineEdit_new_password->setVisible(false);
+        ui->lineEdit_confirm_new_password->setVisible(false);
+        ui->label_new_password->setVisible(false);
+        ui->label_confirm_new_password->setVisible(false);
+        ui->pushButton_reset_password->setVisible(false);
     } else {
         change_enter_type(false);
     }
+}
+
+void AuthRegForm::showNewPasswordFields(bool show)
+{
+    ui->lineEdit_new_password->setVisible(show);
+    ui->lineEdit_confirm_new_password->setVisible(show);
+    ui->label_new_password->setVisible(show);
+    ui->label_confirm_new_password->setVisible(show);
+    ui->pushButton_reset_password->setVisible(show);
 }
 
 void AuthRegForm::clearPasswordResetForm()
@@ -140,6 +174,7 @@ void AuthRegForm::clearPasswordResetForm()
     ui->lineEdit_verification_code->clear();
     ui->lineEdit_new_password->clear();
     ui->lineEdit_confirm_new_password->clear();
+    // Не очищаем поле логина, так как оно может быть нужно для повторной попытки
 }
 
 void AuthRegForm::on_pushButton_forgot_password_clicked()
@@ -154,7 +189,7 @@ void AuthRegForm::on_pushButton_send_code_clicked()
         return;
     }
     
-    QString username = ui->lineEdit_login->text();
+    QString username = ui->lineEdit_reset_username->text();
     
     if (username.isEmpty()) {
         ui->label_test_status->setText("Please enter your username");
@@ -174,7 +209,7 @@ void AuthRegForm::on_pushButton_send_code_clicked()
 
 void AuthRegForm::on_pushButton_reset_password_clicked()
 {
-    QString username = ui->lineEdit_login->text();
+    QString username = ui->lineEdit_reset_username->text();
     QString verificationCode = ui->lineEdit_verification_code->text();
     QString newPassword = ui->lineEdit_new_password->text();
     QString confirmPassword = ui->lineEdit_confirm_new_password->text();
@@ -227,5 +262,54 @@ void AuthRegForm::handlePasswordResetResult(bool success, const QString& message
     if (success) {
         showPasswordResetForm(false);
         clearPasswordResetForm();
+    }
+}
+
+void AuthRegForm::on_pushButton_verify_code_clicked()
+{
+    QString username = ui->lineEdit_reset_username->text();
+    QString verificationCode = ui->lineEdit_verification_code->text();
+    
+    if (username.isEmpty() || verificationCode.isEmpty()) {
+        ui->label_test_status->setText("Please enter username and verification code");
+        return;
+    }
+    
+    ClientManager* client = ClientManager::getInstance();
+    if (verificationCode == client->getStoredVerificationCode()) {
+        showNewPasswordFields(true);
+        ui->label_test_status->setText("Verification successful. Please enter new password.");
+    } else {
+        ui->label_test_status->setText("Invalid verification code");
+    }
+}
+
+void AuthRegForm::auth(const QString& login, const QString& password)
+{
+    ClientManager* client = ClientManager::getInstance();
+    client->loginUser(login, password);
+}
+
+void AuthRegForm::reg(const QString& login, const QString& password, const QString& email)
+{
+    ClientManager* client = ClientManager::getInstance();
+    client->registerUser(login, password, email);
+}
+
+void AuthRegForm::handleConnectionStatus(bool connected)
+{
+    if (connected) {
+        ui->label_test_status->setText("Connected to server");
+        qDebug() << "Connection status: Connected to server";
+    } else {
+        ui->label_test_status->setText("Not connected to server");
+        qDebug() << "Connection status: Not connected to server";
+        
+        // Пробуем переподключиться
+        ClientManager* client = ClientManager::getInstance();
+        if (!client->isConnected()) {
+            qDebug() << "Attempting to reconnect...";
+            client->connectToServer();
+        }
     }
 }

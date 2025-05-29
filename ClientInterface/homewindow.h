@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include <cmath>
 #include "equationsolver.h"
+#include "clientmanager.h"
 
 using namespace std;
 
@@ -23,6 +24,7 @@ public:
 private slots:
     void on_pushButton_solve_clicked();
     void on_comboBox_function_currentIndexChanged(int index);
+    void onEquationSolved(bool success, double root, const QString& message);
 
 private:
     Ui::HomeWindow *ui;

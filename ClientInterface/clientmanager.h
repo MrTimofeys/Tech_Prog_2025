@@ -20,7 +20,10 @@ private:
 public:
     static ClientManager* getInstance();
     static void destroyInstance();
-
+    bool solveEquation(const QString &functionName,
+                      double x0,
+                      double tolerance,
+                      int maxIterations);
     // bool connectToServer(const QString& host = "localhost", quint16 port = 33333);
     bool connectToServer(const QString& host = "77.222.47.216", quint16 port = 33333);
     void disconnectFromServer();
@@ -42,6 +45,7 @@ signals:
     void loginResult(bool success, const QString& message);
     void verificationCodeResult(bool success, const QString& message);
     void passwordResetResult(bool success, const QString& message);
+    void equationSolved(bool success, double root, const QString& message);
 
 private slots:
     void onConnected();
