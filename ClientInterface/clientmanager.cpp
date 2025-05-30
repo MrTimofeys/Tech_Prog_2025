@@ -250,6 +250,7 @@ void ClientManager::sendRequest(const QJsonObject& request)
 void ClientManager::processResponse(const QJsonObject& response)
 {
     QString message = response["message"].toString();
+    qDebug() << "Processing response message:" << message;
     
     if (message.contains("Verification code sent")) {
         storedVerificationCode = response["code"].toString();
@@ -259,6 +260,8 @@ void ClientManager::processResponse(const QJsonObject& response)
         emit passwordResetResult(true, message);
     } else if (message.contains("registered successfully")) {
         emit registrationResult(true, message);
+    } else if (message.contains("Registration failed")) {
+        emit registrationResult(false, "User already exists");
     } else if (message.contains("Error")) {
         if (message.contains("verification code")) {
             emit verificationCodeResult(false, message);
@@ -275,9 +278,10 @@ void ClientManager::processResponse(const QJsonObject& response)
         double root = response["root"].toDouble();
         message = response["message"].toString();
         qDebug() << "Root found:" << root << "-" << message;
-        emit equationSolved(true, root, message); // Предполагается, что вы создадите такой сигнал
+        emit equationSolved(true, root, message);
     } else if (response["message"].toString().contains("No convergence")) {
         emit equationSolved(false, 0.0, response["message"].toString());
+    } else {
+        qDebug() << "Unhandled message type:" << message;
     }
-
 } 

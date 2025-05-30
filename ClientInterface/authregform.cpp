@@ -129,12 +129,20 @@ void AuthRegForm::handleLoginResult(bool success, const QString& message)
 
 void AuthRegForm::handleRegistrationResult(bool success, const QString& message)
 {
+    qDebug() << "Registration result received - success:" << success << "message:" << message;
+    
     if (success) {
         ui->label_test_status->setText("Registration successful. Please login.");
         change_enter_type(false); // Переключаемся на форму авторизации
         clear_form();
     } else {
-        ui->label_test_status->setText("Registration failed: " + message);
+        if (message.contains("already exists", Qt::CaseInsensitive)) {
+            qDebug() << "User already exists message detected";
+            ui->label_test_status->setText("User already exists");
+        } else {
+            qDebug() << "Registration failed with message:" << message;
+            ui->label_test_status->setText("Registration failed: " + message);
+        }
         clear_form();
     }
 }
