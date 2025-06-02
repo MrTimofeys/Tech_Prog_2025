@@ -1,0 +1,9 @@
+<map id="ServerTests/testmytcpserver.h" name="ServerTests/testmytcpserver.h">
+<area shape="rect" id="Node000001" title="Описание класса для модульного тестирования функционала сервера TestMyTcpServer." alt="" coords="260,5,461,32"/>
+<area shape="rect" id="Node000002" href="$moc__testmytcpserver_8cpp.html" title="Автоматически сгенерированный файл метаобъекта для класса TestMyTcpServer." alt="" coords="5,80,263,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="315,41,209,82,207,77,313,36"/>
+<area shape="rect" id="Node000003" href="$_server_tests_2main_8cpp.html" title="Запуск модульного тестирования функционала сервера." alt="" coords="286,96,435,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="363,48,363,95,358,95,358,48"/>
+<area shape="rect" id="Node000004" href="$testmytcpserver_8cpp.html" title="Реализация класса для модульного тестирования функционала сервера TestMyTcpServer." alt="" coords="459,96,673,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="405,36,538,93,536,98,403,41"/>
+</map>

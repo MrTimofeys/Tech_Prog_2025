@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QMessageBox>
 #include <cmath>
-#include "equationsolver.h"
+// #include "equationsolver.h"
 #include "clientmanager.h"
 
 using namespace std;
@@ -28,7 +28,7 @@ private slots:
 
 private:
     Ui::HomeWindow *ui;
-    equationSolver solver;
+    // equationSolver solver;
     
     // Вспомогательная функция для проверки ввода
     bool validateInput(double &x0, double &tolerance, int &maxIterations);

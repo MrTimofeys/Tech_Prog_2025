@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Решение уравнений вида х = у(х) методом последовательных приближений (итерационным методом): Исходный файл ClientInterface/clientmanager.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Решение уравнений вида х = у(х) методом последовательных приближений (итерационным методом)
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('clientmanager_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">clientmanager.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="clientmanager_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;QTcpSocket&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;QJsonDocument&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;QJsonObject&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QHostAddress&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_client_manager.html">   19</a></span><span class="keyword">class </span>ClientManager : <span class="keyword">public</span> QObject</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    Q_OBJECT</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">static</span> ClientManager* instance; </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    QTcpSocket* socket;             </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    QString storedVerificationCode; </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">explicit</span> ClientManager(QObject* parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    ~ClientManager();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">static</span> ClientManager* <a class="code hl_function" href="class_client_manager.html#a712e826ffb83b207a1c74831fea63837">getInstance</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_client_manager.html#ab7b46dce9dbddae236185919de3c6340">destroyInstance</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_client_manager.html#a736ed42962d75301a80e9a59a68182d1">solveEquation</a>(<span class="keyword">const</span> QString&amp; functionName,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">double</span> x0,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">double</span> tolerance,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordtype">int</span> maxIterations);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_client_manager.html#ade5e0886a7d8120e8ccca221ef407df1">connectToServer</a>(<span class="keyword">const</span> QString&amp; host = <span class="stringliteral">&quot;77.222.47.216&quot;</span>, quint16 port = 33333);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_client_manager.html#a04d461e2b8f6c51bd5beaf3bc5b957b4">disconnectFromServer</a>();</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_client_manager.html#a8b68d6ccc61477be3e5f90760434b4b9">isConnected</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_client_manager.html#a092a44dab9d3020071e398565c15b039">registerUser</a>(<span class="keyword">const</span> QString&amp; username, <span class="keyword">const</span> QString&amp; password, <span class="keyword">const</span> QString&amp; email);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_client_manager.html#a1a17ae5acd787b26f64d69d1056200ce">loginUser</a>(<span class="keyword">const</span> QString&amp; username, <span class="keyword">const</span> QString&amp; password);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_client_manager.html#af355cfb20b23f94b91a88d411f639eea">sendVerificationCode</a>(<span class="keyword">const</span> QString&amp; username);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_client_manager.html#af3e942aaadc4886238d41499eab01d53">resetPassword</a>(<span class="keyword">const</span> QString&amp; username, <span class="keyword">const</span> QString&amp; code, <span class="keyword">const</span> QString&amp; newPassword);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_client_manager.html#adbbaea686d916c47035b1987e1d77bdc">  119</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_client_manager.html#adbbaea686d916c47035b1987e1d77bdc">clearStoredVerificationCode</a>() { storedVerificationCode.clear(); }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="class_client_manager.html#abd331ed36fd567f1f16892634340db2a">  125</a></span>    QString <a class="code hl_function" href="class_client_manager.html#abd331ed36fd567f1f16892634340db2a">getStoredVerificationCode</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> storedVerificationCode; }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>signals:</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="class_client_manager.html#ad9131f7b0775a8cdaa9690b3460d8137">  132</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_client_manager.html#ad9131f7b0775a8cdaa9690b3460d8137">connectionStatusChanged</a>(<span class="keywordtype">bool</span> connected);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="class_client_manager.html#a9719c89557aff68620f537e38c456243">  139</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_client_manager.html#a9719c89557aff68620f537e38c456243">registrationResult</a>(<span class="keywordtype">bool</span> success, <span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="class_client_manager.html#aafa6d47d5d59e7b660ef0865a464ba51">  146</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_client_manager.html#aafa6d47d5d59e7b660ef0865a464ba51">loginResult</a>(<span class="keywordtype">bool</span> success, <span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="class_client_manager.html#a78aa23d175db3cbcad3d627d46c555aa">  153</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_client_manager.html#a78aa23d175db3cbcad3d627d46c555aa">verificationCodeResult</a>(<span class="keywordtype">bool</span> success, <span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="class_client_manager.html#aa92b3af32dffef0590a3bbd7e15f60ba">  160</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_client_manager.html#aa92b3af32dffef0590a3bbd7e15f60ba">passwordResetResult</a>(<span class="keywordtype">bool</span> success, <span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="class_client_manager.html#ae2222a8ff9ab236441da540ee865a449">  168</a></span>    <span class="keywordtype">void</span> <a class="code hl_signal" href="class_client_manager.html#ae2222a8ff9ab236441da540ee865a449">equationSolved</a>(<span class="keywordtype">bool</span> success, <span class="keywordtype">double</span> root, <span class="keyword">const</span> QString&amp; message);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="keyword">private</span> slots:</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordtype">void</span> onConnected();</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordtype">void</span> onDisconnected();</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordtype">void</span> onReadyRead();</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordtype">void</span> onError(QAbstractSocket::SocketError socketError);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordtype">void</span> sendRequest(<span class="keyword">const</span> QJsonObject&amp; request);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordtype">void</span> processResponse(<span class="keyword">const</span> QJsonObject&amp; response);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>};</div>
+</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="preprocessor">#endif </span><span class="comment">// CLIENTMANAGER_H</span></div>
+<div class="ttc" id="aclass_client_manager_html_a04d461e2b8f6c51bd5beaf3bc5b957b4"><div class="ttname"><a href="class_client_manager.html#a04d461e2b8f6c51bd5beaf3bc5b957b4">ClientManager::disconnectFromServer</a></div><div class="ttdeci">void disconnectFromServer()</div><div class="ttdoc">Разорвать соединение с сервером.</div><div class="ttdef"><b>Определения</b> <a href="clientmanager_8cpp_source.html#l00100">clientmanager.cpp:100</a></div></div>
+<div class="ttc" id="aclass_client_manager_html_a092a44dab9d3020071e398565c15b039"><div class="ttname"><a href="class_client_manager.html#a092a44dab9d3020071e398565c15b039">ClientManager::registerUser</a></div><div class="ttdeci">bool registerUser(const QString &amp;username, const QString &amp;password, const QString &amp;email)</div><div class="ttdoc">Зарегистрировать нового пользователя.</div><div class="ttdef"><b>Определения</b> <a href="clientmanager_8cpp_source.html#l00151">clientmanager.cpp:151</a></div></div>
+<div class="ttc" id="aclass_client_manager_html_a1a17ae5acd787b26f64d69d1056200ce"><div class="ttname"><a href="class_client_manager.html#a1a17ae5acd787b26f64d69d1056200ce">ClientManager::loginUser</a></div><div class="ttdeci">bool loginUser(const QString &amp;username, const QString &amp;password)</div><div class="ttdoc">Авторизовать пользователя.</div><div class="ttdef"><b>Определения</b> <a href="clientmanager_8cpp_source.html#l00174">clientmanager.cpp:174</a></div></div>
+<div class="ttc" id="aclass_client_manager_html_a712e826ffb83b207a1c74831fea63837"><div class="ttname"><a href="class_client_manager.html#a712e826ffb83b207a1c74831fea63837">ClientManager::getInstance</a></div><div class="ttdeci">static ClientManager * getInstance()</div><div class="ttdoc">Получить единственный экземпляр ClientManager.</div><div class="ttdef"><b>Определения</b> <a href="clientmanager_8cpp_source.html#l00016">clientmanager.cpp:16</a></div></div>
+<div class="ttc" id="aclass_client_manager_html_a736ed42962d75301a80e9a59a68182d1"><div class="ttname"><a href="class_client_manager.html#a736ed42962d75301a80e9a59a68182d1">ClientManager::solveEquation</a></div><div class="ttdeci">bool solveEquation(const QString &amp;functionName, double x0, double tolerance, int maxIterations)</div><div class="ttdoc">Решить уравнение на сервере.</div><div class="ttdef"><b>Определения</b> <a href="clientmanager_8cpp_source.html#l00125">clientmanager.cpp:125</a></div></div>
+<div class="ttc" id="aclass_client_manager_html_a78aa23d175db3cbcad3d627d46c555aa"><div class="ttname"><a href="class_client_manager.html#a78aa23d175db3cbcad3d627d46c555aa">ClientManager::verificationCodeResult</a></div><div class="ttdeci">void verificationCodeResult(bool success, const QString &amp;message)</div><div class="ttdoc">Сигнал результата отправки кода подтверждения.</div></div>
+<div class="ttc" id="aclass_client_manager_html_a8b68d6ccc61477be3e5f90760434b4b9"><div class="ttname"><a href="class_client_manager.html#a8b68d6ccc61477be3e5f90760434b4b9">ClientManager::isConnected</a></div><div class="ttdeci">bool isConnected() const</div><div class="ttdoc">Проверить, установлено ли соединение с сервером.</div><div class="ttdef"><b>Определения</b> <a href="clientmanager_8cpp_source.html#l00112">clientmanager.cpp:112</a></div></div>
+<div class="ttc" id="aclass_client_manager_html_a9719c89557aff68620f537e38c456243"><div class="ttname"><a href="class_client_manager.html#a9719c89557aff68620f537e38c456243">ClientManager::registrationResult</a></div><div class="ttdeci">void registrationResult(bool success, const QString &amp;message)</div><div class="ttdoc">Сигнал результата регистрации пользователя.</div></div>
+<div class="ttc" id="aclass_client_manager_html_aa92b3af32dffef0590a3bbd7e15f60ba"><div class="ttname"><a href="class_client_manager.html#aa92b3af32dffef0590a3bbd7e15f60ba">ClientManager::passwordResetResult</a></div><div class="ttdeci">void passwordResetResult(bool success, const QString &amp;message)</div><div class="ttdoc">Сигнал результата сброса пароля.</div></div>
+<div class="ttc" id="aclass_client_manager_html_aafa6d47d5d59e7b660ef0865a464ba51"><div class="ttname"><a href="class_client_manager.html#aafa6d47d5d59e7b660ef0865a464ba51">ClientManager::loginResult</a></div><div class="ttdeci">void loginResult(bool success, const QString &amp;message)</div><div class="ttdoc">Сигнал результата авторизации пользователя.</div></div>
+<div class="ttc" id="aclass_client_manager_html_ab7b46dce9dbddae236185919de3c6340"><div class="ttname"><a href="class_client_manager.html#ab7b46dce9dbddae236185919de3c6340">ClientManager::destroyInstance</a></div><div class="ttdeci">static void destroyInstance()</div><div class="ttdoc">Уничтожить единственный экземпляр ClientManager.</div><div class="ttdef"><b>Определения</b> <a href="clientmanager_8cpp_source.html#l00027">clientmanager.cpp:27</a></div></div>
+<div class="ttc" id="aclass_client_manager_html_abd331ed36fd567f1f16892634340db2a"><div class="ttname"><a href="class_client_manager.html#abd331ed36fd567f1f16892634340db2a">ClientManager::getStoredVerificationCode</a></div><div class="ttdeci">QString getStoredVerificationCode() const</div><div class="ttdoc">Получить сохранённый код подтверждения.</div><div class="ttdef"><b>Определения</b> <a href="#l00125">clientmanager.h:125</a></div></div>
+<div class="ttc" id="aclass_client_manager_html_ad9131f7b0775a8cdaa9690b3460d8137"><div class="ttname"><a href="class_client_manager.html#ad9131f7b0775a8cdaa9690b3460d8137">ClientManager::connectionStatusChanged</a></div><div class="ttdeci">void connectionStatusChanged(bool connected)</div><div class="ttdoc">Сигнал изменения статуса соединения.</div></div>
+<div class="ttc" id="aclass_client_manager_html_adbbaea686d916c47035b1987e1d77bdc"><div class="ttname"><a href="class_client_manager.html#adbbaea686d916c47035b1987e1d77bdc">ClientManager::clearStoredVerificationCode</a></div><div class="ttdeci">void clearStoredVerificationCode()</div><div class="ttdoc">Очистить сохранённый код подтверждения.</div><div class="ttdef"><b>Определения</b> <a href="#l00119">clientmanager.h:119</a></div></div>
+<div class="ttc" id="aclass_client_manager_html_ade5e0886a7d8120e8ccca221ef407df1"><div class="ttname"><a href="class_client_manager.html#ade5e0886a7d8120e8ccca221ef407df1">ClientManager::connectToServer</a></div><div class="ttdeci">bool connectToServer(const QString &amp;host=&quot;77.222.47.216&quot;, quint16 port=33333)</div><div class="ttdoc">Установить соединение с сервером.</div><div class="ttdef"><b>Определения</b> <a href="clientmanager_8cpp_source.html#l00066">clientmanager.cpp:66</a></div></div>
+<div class="ttc" id="aclass_client_manager_html_ae2222a8ff9ab236441da540ee865a449"><div class="ttname"><a href="class_client_manager.html#ae2222a8ff9ab236441da540ee865a449">ClientManager::equationSolved</a></div><div class="ttdeci">void equationSolved(bool success, double root, const QString &amp;message)</div><div class="ttdoc">Сигнал результата решения уравнения.</div></div>
+<div class="ttc" id="aclass_client_manager_html_af355cfb20b23f94b91a88d411f639eea"><div class="ttname"><a href="class_client_manager.html#af355cfb20b23f94b91a88d411f639eea">ClientManager::sendVerificationCode</a></div><div class="ttdeci">bool sendVerificationCode(const QString &amp;username)</div><div class="ttdoc">Отправить код подтверждения для восстановления пароля.</div><div class="ttdef"><b>Определения</b> <a href="clientmanager_8cpp_source.html#l00195">clientmanager.cpp:195</a></div></div>
+<div class="ttc" id="aclass_client_manager_html_af3e942aaadc4886238d41499eab01d53"><div class="ttname"><a href="class_client_manager.html#af3e942aaadc4886238d41499eab01d53">ClientManager::resetPassword</a></div><div class="ttdeci">bool resetPassword(const QString &amp;username, const QString &amp;code, const QString &amp;newPassword)</div><div class="ttdoc">Сбросить пароль пользователя.</div><div class="ttdef"><b>Определения</b> <a href="clientmanager_8cpp_source.html#l00217">clientmanager.cpp:217</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_ecf738337a5038529400f0eb4d1cabf1.html">ClientInterface</a></li><li class="navelem"><a href="clientmanager_8h.html">clientmanager.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

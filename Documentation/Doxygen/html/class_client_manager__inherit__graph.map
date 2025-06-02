@@ -1,0 +1,5 @@
+<map id="ClientManager" name="ClientManager">
+<area shape="rect" id="Node000001" title="Класс для управления клиентским соединением с сервером." alt="" coords="5,80,111,107"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="23,5,93,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,48,61,80,55,80,55,48"/>
+</map>

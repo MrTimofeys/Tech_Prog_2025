@@ -1,0 +1,5 @@
+<map id="ClientManager::loginUser" name="ClientManager::loginUser">
+<area shape="rect" id="Node000001" title="Авторизовать пользователя." alt="" coords="100,5,268,32"/>
+<area shape="rect" id="Node000002" href="$funcsforclient_8cpp.html#ae14792135403f186fb2c51f377b515ab" title="Функция авторизации пользователя." alt="" coords="5,5,52,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,21,52,21,52,16,84,16"/>
+</map>

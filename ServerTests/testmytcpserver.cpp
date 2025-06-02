@@ -1,4 +1,4 @@
-#include "testmytcpserver.h"
+#include "./testmytcpserver.h"
 
 void TestMyTcpServer::initTestCase()
 {

@@ -1,0 +1,7 @@
+<map id="ClientManager::sendVerificationCode" name="ClientManager::sendVerificationCode">
+<area shape="rect" id="Node000001" title="Отправить код подтверждения для восстановления пароля." alt="" coords="5,35,242,61"/>
+<area shape="rect" id="Node000002" href="$class_client_manager.html#a8b68d6ccc61477be3e5f90760434b4b9" title="Проверить, установлено ли соединение с сервером." alt="" coords="290,5,476,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="242,32,274,28,274,34,243,37"/>
+<area shape="rect" id="Node000003" href="$class_client_manager.html#a78aa23d175db3cbcad3d627d46c555aa" title="Сигнал результата отправки кода подтверждения." alt="" coords="295,56,471,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,59,279,63,279,68,242,64"/>
+</map>

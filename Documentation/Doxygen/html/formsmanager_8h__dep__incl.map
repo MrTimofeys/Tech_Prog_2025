@@ -1,0 +1,7 @@
+<map id="ClientInterface/formsmanager.h" name="ClientInterface/formsmanager.h">
+<area shape="rect" id="Node000001" title="Описание класса FormsManager, который управляет отображением форм авторизации/регистрации и главного ..." alt="" coords="119,5,323,32"/>
+<area shape="rect" id="Node000002" href="$formsmanager_8cpp.html" title="Реализация класса FormsManager." alt="" coords="5,80,224,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,43,135,82,132,77,189,39"/>
+<area shape="rect" id="Node000003" href="$_client_interface_2main_8cpp.html" title="Основной файл запуска клиента." alt="" coords="248,80,411,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="254,39,312,77,309,82,251,43"/>
+</map>

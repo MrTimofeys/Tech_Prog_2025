@@ -1,0 +1,23 @@
+<map id="ServerTests/build/Desktop_Qt_6_8_2_MinGW_64_bit&#45;Debug/debug/moc_testmytcpserver.cpp" name="ServerTests/build/Desktop_Qt_6_8_2_MinGW_64_bit&#45;Debug/debug/moc_testmytcpserver.cpp">
+<area shape="rect" id="Node000001" title="Автоматически сгенерированный файл метаобъекта для класса TestMyTcpServer." alt="" coords="570,5,827,64"/>
+<area shape="rect" id="Node000002" href="$testmytcpserver_8h.html" title="Описание класса для модульного тестирования функционала сервера TestMyTcpServer." alt="" coords="48,120,210,147"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="570,57,223,115,201,119,200,114,222,109,569,52"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="234,120,379,147"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="583,67,373,118,372,113,581,62"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="403,112,605,155"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="642,67,561,107,558,102,640,62"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="629,120,768,147"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="701,64,701,104,696,104,696,64"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="792,120,949,147"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="751,62,836,110,834,114,749,67"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="972,120,1041,147"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="810,62,962,109,967,111,965,116,960,115,809,67"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="1065,120,1226,147"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="829,61,1054,109,1073,114,1072,119,1053,115,827,66"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,219,75,245"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="120,149,63,210,59,206,116,145"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="99,219,160,245"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="132,147,132,203,127,203,127,147"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="183,203,348,261"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="149,145,215,192,212,196,146,149"/>
+</map>

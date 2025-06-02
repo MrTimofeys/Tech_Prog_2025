@@ -1,0 +1,33 @@
+<map id="Server/main.cpp" name="Server/main.cpp">
+<area shape="rect" id="Node000001" title="Основной файл запуска сервера." alt="" coords="874,5,990,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="621,80,745,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="890,35,742,78,741,73,888,30"/>
+<area shape="rect" id="Node000003" href="$mytcpserver_8h.html" title="Заголовочный файл для класса MyTcpServer, реализующего TCP&#45;сервер для регистрации и авторизации польз..." alt="" coords="768,80,872,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="914,35,854,74,851,69,911,30"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="1146,155,1215,181"/>
+<area shape="poly" id="edge16_Node000001_Node000009" title=" " alt="" coords="955,30,1148,144,1145,149,952,35"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="1239,155,1383,181"/>
+<area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="966,30,1266,146,1264,151,964,35"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="452,155,522,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="768,108,537,157,536,151,767,102"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="546,155,636,181"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="781,110,647,152,645,147,780,105"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="660,155,754,181"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="802,109,741,148,738,144,799,105"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="778,155,862,181"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="823,107,823,139,818,139,818,107"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="886,155,976,181"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="841,105,901,144,898,148,838,109"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="873,101,1131,152,1130,157,872,106"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="873,100,1224,151,1223,156,872,105"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="999,155,1122,181"/>
+<area shape="poly" id="edge10_Node000003_Node000011" title=" " alt="" coords="863,105,1004,147,1003,152,861,110"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="5,155,121,181"/>
+<area shape="poly" id="edge11_Node000003_Node000012" title=" " alt="" coords="768,108,757,109,584,127,448,134,311,141,136,157,136,152,311,135,448,129,584,122,756,104,767,102"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="145,155,288,181"/>
+<area shape="poly" id="edge12_Node000003_Node000013" title=" " alt="" coords="768,108,757,109,631,125,531,135,303,157,303,152,531,129,630,120,756,104,767,102"/>
+<area shape="rect" id="Node000014" href="$equationsolver_8h.html" title="Решение уравнений итерационными методами" alt="" coords="312,155,428,181"/>
+<area shape="poly" id="edge13_Node000003_Node000014" title=" " alt="" coords="768,107,757,109,443,157,443,152,756,104,767,102"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="337,229,402,256"/>
+<area shape="poly" id="edge14_Node000014_Node000015" title=" " alt="" coords="372,182,372,214,367,214,367,182"/>
+</map>

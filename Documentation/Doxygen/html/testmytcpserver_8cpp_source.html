@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Решение уравнений вида х = у(х) методом последовательных приближений (итерационным методом): Исходный файл ServerTests/testmytcpserver.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Решение уравнений вида х = у(х) методом последовательных приближений (итерационным методом)
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('testmytcpserver_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">testmytcpserver.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="testmytcpserver_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="testmytcpserver_8h.html">testmytcpserver.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">void</span> TestMyTcpServer::initTestCase()</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    server = <span class="keyword">new</span> MyTcpServer(<span class="keyword">nullptr</span>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    QSqlQuery query(QSqlDatabase::database());</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    query.exec(<span class="stringliteral">&quot;DELETE FROM users&quot;</span>);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">void</span> TestMyTcpServer::cleanupTestCase() {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">delete</span> server;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> TestMyTcpServer::testRegisterUser() {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    QVERIFY(server-&gt;registerUser(<span class="stringliteral">&quot;user1&quot;</span>, <span class="stringliteral">&quot;pass123&quot;</span>, <span class="stringliteral">&quot;user1@example.com&quot;</span>));</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    QVERIFY(!server-&gt;registerUser(<span class="stringliteral">&quot;user1&quot;</span>, <span class="stringliteral">&quot;pass123&quot;</span>, <span class="stringliteral">&quot;user1@example.com&quot;</span>));</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>}</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> TestMyTcpServer::testAuthenticateUser() {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    server-&gt;registerUser(<span class="stringliteral">&quot;user2&quot;</span>, <span class="stringliteral">&quot;mypassword&quot;</span>, <span class="stringliteral">&quot;user2@example.com&quot;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    QVERIFY(server-&gt;authenticateUser(<span class="stringliteral">&quot;user2&quot;</span>, <span class="stringliteral">&quot;mypassword&quot;</span>));</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    QVERIFY(!server-&gt;authenticateUser(<span class="stringliteral">&quot;user2&quot;</span>, <span class="stringliteral">&quot;wrongpass&quot;</span>));</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> TestMyTcpServer::testHashPasswordConsistency() {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    QString hash1 = server-&gt;hashPassword(<span class="stringliteral">&quot;password&quot;</span>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    QString hash2 = server-&gt;hashPassword(<span class="stringliteral">&quot;password&quot;</span>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    QCOMPARE(hash1, hash2);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> TestMyTcpServer::testGenerateRandomCodeLength() {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    QString code = server-&gt;generateRandomCode(6);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    QCOMPARE(code.length(), 6);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keywordtype">void</span> TestMyTcpServer::testGenerateRandomCodeUniqueness() {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    QString code1 = server-&gt;generateRandomCode(6);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    QString code2 = server-&gt;generateRandomCode(6);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    QVERIFY(code1 != code2);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="keywordtype">void</span> TestMyTcpServer::testFailedAuthentication() {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    server-&gt;registerUser(<span class="stringliteral">&quot;user3&quot;</span>, <span class="stringliteral">&quot;correctpass&quot;</span>, <span class="stringliteral">&quot;user3@example.com&quot;</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    QVERIFY(!server-&gt;authenticateUser(<span class="stringliteral">&quot;user3&quot;</span>, <span class="stringliteral">&quot;wrongpass&quot;</span>));</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="keywordtype">void</span> TestMyTcpServer::testDuplicateUsernameRegistration() {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">bool</span> firstTry = server-&gt;registerUser(<span class="stringliteral">&quot;user4&quot;</span>, <span class="stringliteral">&quot;pass1&quot;</span>, <span class="stringliteral">&quot;user4@example.com&quot;</span>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">bool</span> secondTry = server-&gt;registerUser(<span class="stringliteral">&quot;user4&quot;</span>, <span class="stringliteral">&quot;pass2&quot;</span>, <span class="stringliteral">&quot;user4duplicate@example.com&quot;</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    QVERIFY(firstTry);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    QVERIFY(!secondTry);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keywordtype">void</span> TestMyTcpServer::testMathFunc() {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keywordtype">double</span> result = MyTcpServer::mathFunc(0.0);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    QCOMPARE(result, 1.0);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="keywordtype">void</span> TestMyTcpServer::testSolveEquation() {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordtype">double</span> result = <a class="code hl_function" href="classequation_solver.html#abab7d0cc0f7be9a9313639be9a5dd320">equationSolver::solveIterationMethod</a>(MyTcpServer::mathFunc, 0.0, 1.0, 100);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    QVERIFY(result &gt;= 0.0 &amp;&amp; result &lt;= 1.0);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>}</div>
+<div class="ttc" id="aclassequation_solver_html_abab7d0cc0f7be9a9313639be9a5dd320"><div class="ttname"><a href="classequation_solver.html#abab7d0cc0f7be9a9313639be9a5dd320">equationSolver::solveIterationMethod</a></div><div class="ttdeci">static double solveIterationMethod(const QString &amp;funcName, double x0, double tolerance, int maxIterations)</div><div class="ttdoc">Решает уравнение итерационным методом</div><div class="ttdef"><b>Определения</b> <a href="equationsolver_8cpp_source.html#l00048">equationsolver.cpp:48</a></div></div>
+<div class="ttc" id="atestmytcpserver_8h_html"><div class="ttname"><a href="testmytcpserver_8h.html">testmytcpserver.h</a></div><div class="ttdoc">Описание класса для модульного тестирования функционала сервера TestMyTcpServer.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_9718671ae943f47603b4ebe24bfa915e.html">ServerTests</a></li><li class="navelem"><a href="testmytcpserver_8cpp.html">testmytcpserver.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

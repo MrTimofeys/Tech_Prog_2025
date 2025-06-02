@@ -1,0 +1,15 @@
+<map id="auth" name="auth">
+<area shape="rect" id="Node000001" title="Функция авторизации пользователя." alt="" coords="5,123,52,149"/>
+<area shape="rect" id="Node000002" href="$class_client_manager.html#ade5e0886a7d8120e8ccca221ef407df1" title="Установить соединение с сервером." alt="" coords="104,5,277,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="37,121,62,90,98,58,106,53,108,58,101,62,66,93,41,124"/>
+<area shape="rect" id="Node000003" href="$class_client_manager.html#a712e826ffb83b207a1c74831fea63837" title="Получить единственный экземпляр ClientManager." alt="" coords="100,72,281,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="51,126,131,101,132,106,53,131"/>
+<area shape="rect" id="Node000004" href="$class_client_manager.html#a8b68d6ccc61477be3e5f90760434b4b9" title="Проверить, установлено ли соединение с сервером." alt="" coords="329,148,515,175"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="52,135,313,152,313,157,52,140"/>
+<area shape="rect" id="Node000005" href="$class_client_manager.html#aafa6d47d5d59e7b660ef0865a464ba51" title="Сигнал результата авторизации пользователя." alt="" coords="333,211,511,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="40,148,64,181,81,197,101,210,155,228,212,237,269,239,321,237,322,242,269,245,212,243,154,233,99,214,78,201,60,184,36,151"/>
+<area shape="rect" id="Node000006" href="$class_client_manager.html#a1a17ae5acd787b26f64d69d1056200ce" title="Авторизовать пользователя." alt="" coords="106,173,274,200"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="53,141,132,166,131,171,51,146"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="275,175,313,171,314,176,275,180"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="275,198,321,205,320,210,275,203"/>
+</map>

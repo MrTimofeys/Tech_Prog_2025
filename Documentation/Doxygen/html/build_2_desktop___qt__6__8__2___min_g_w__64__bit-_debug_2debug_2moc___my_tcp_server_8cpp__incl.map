@@ -1,0 +1,41 @@
+<map id="Server/build/Desktop_Qt_6_8_2_MinGW_64_bit&#45;Debug/debug/moc_MyTcpServer.cpp" name="Server/build/Desktop_Qt_6_8_2_MinGW_64_bit&#45;Debug/debug/moc_MyTcpServer.cpp">
+<area shape="rect" id="Node000001" title="Автоматически сгенерированный файл метаобъекта для класса MyTcpServer." alt="" coords="1026,5,1267,64"/>
+<area shape="rect" id="Node000002" href="$mytcpserver_8h.html" title="Заголовочный файл для класса MyTcpServer, реализующего TCP&#45;сервер для регистрации и авторизации польз..." alt="" coords="518,120,658,147"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1026,55,858,81,671,115,652,119,651,113,670,109,857,76,1025,50"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="682,112,883,155"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="1039,67,876,110,875,105,1038,62"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="907,120,1053,147"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="1098,67,1016,114,1014,110,1096,62"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1077,120,1216,147"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="1149,64,1149,104,1144,104,1144,64"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="1240,120,1397,147"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="1199,62,1284,110,1282,114,1197,67"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="1420,120,1489,147"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="1258,62,1410,109,1415,111,1413,116,1408,115,1257,67"/>
+<area shape="rect" id="Node000020" title=" " alt="" coords="1513,120,1674,147"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="1268,59,1502,109,1521,114,1520,119,1501,115,1267,64"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,203,75,229"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="518,144,329,167,90,205,90,200,328,161,517,139"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="99,203,189,229"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="518,149,205,205,204,199,517,144"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="213,203,307,229"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="537,150,322,202,321,197,536,145"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="331,203,416,229"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="555,150,422,199,420,194,554,145"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="439,203,529,229"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="573,149,513,195,510,191,570,145"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="553,203,623,229"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="591,147,591,187,585,187,585,147"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="647,203,790,229"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="610,145,687,192,684,197,607,149"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="815,203,937,229"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="634,145,817,195,815,201,632,150"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="961,203,1076,229"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="638,145,671,152,807,177,946,199,945,205,806,182,670,157,637,150"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1100,203,1244,229"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="636,145,671,152,785,170,876,179,1086,200,1085,205,876,184,785,175,670,157,635,150"/>
+<area shape="rect" id="Node000013" href="$equationsolver_8h.html" title="Решение уравнений итерационными методами" alt="" coords="1267,203,1384,229"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="635,145,671,152,832,172,960,179,1088,185,1252,200,1251,205,1088,190,959,185,832,177,670,157,634,150"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1293,277,1358,304"/>
+<area shape="poly" id="edge13_Node000013_Node000014" title=" " alt="" coords="1328,230,1328,262,1323,262,1323,230"/>
+</map>

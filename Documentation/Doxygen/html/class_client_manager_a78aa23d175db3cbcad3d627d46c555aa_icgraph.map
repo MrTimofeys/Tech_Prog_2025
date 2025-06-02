@@ -1,0 +1,10 @@
+<map id="ClientManager::verificationCodeResult" name="ClientManager::verificationCodeResult">
+<area shape="rect" id="Node000001" title="Сигнал результата отправки кода подтверждения." alt="" coords="290,72,466,115"/>
+<area shape="rect" id="Node000002" href="$class_auth_reg_form.html#a7ec2ba2a7980453c629e141a90602e68" title="Конструктор формы авторизации и регистрации." alt="" coords="28,29,219,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="274,75,194,59,195,54,275,70"/>
+<area shape="rect" id="Node000003" href="$class_client_manager.html#af355cfb20b23f94b91a88d411f639eea" title="Отправить код подтверждения для восстановления пароля." alt="" coords="5,80,242,107"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="274,96,242,96,242,91,274,91"/>
+<area shape="rect" id="Node000004" href="$class_auth_reg_form.html#a8b95ad00c5d29338f850a0f179b12078" title="Деструктор формы." alt="" coords="24,131,223,157"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="275,117,195,133,194,127,274,111"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="168,17,153,10,123,8,97,10,82,15,79,20,85,27,81,31,73,21,79,11,96,5,124,3,154,5,170,12"/>
+</map>

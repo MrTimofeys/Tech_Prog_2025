@@ -1,0 +1,15 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,132,75,159"/>
+<area shape="rect" id="Node000001" href="$class_client_manager.html" title="Класс для управления клиентским соединением с сервером." alt="" coords="134,5,240,32"/>
+<area shape="poly" id="edge5_Node000000_Node000001" title=" " alt="" coords="55,117,83,79,121,42,141,30,144,35,124,46,87,82,59,121"/>
+<area shape="rect" id="Node000002" href="$class_my_tcp_server.html" title="Класс TCP&#45;сервера для обработки подключений клиентов" alt="" coords="138,56,236,83"/>
+<area shape="poly" id="edge6_Node000000_Node000002" title=" " alt="" coords="73,121,121,92,147,81,149,86,124,97,75,126"/>
+<area shape="rect" id="Node000003" href="$class_test_home_window.html" title="Класс для тестирования открытия окна HomeWindow." alt="" coords="123,107,251,133"/>
+<area shape="poly" id="edge7_Node000000_Node000003" title=" " alt="" coords="90,134,122,128,123,134,91,139"/>
+<area shape="rect" id="Node000004" href="$class_test_my_tcp_server.html" title="Класс для модульного тестирования функционала сервера MyTcpServer." alt="" coords="125,157,248,184"/>
+<area shape="poly" id="edge8_Node000000_Node000004" title=" " alt="" coords="91,151,125,157,124,163,90,157"/>
+<area shape="rect" id="Node000005" href="$classfirst.html" title="Класс для тестирования функционала окна HomeWindow." alt="" coords="165,208,208,235"/>
+<area shape="poly" id="edge9_Node000000_Node000005" title=" " alt="" coords="75,165,124,194,166,212,164,216,121,198,73,170"/>
+<area shape="rect" id="Node000006" href="$classtest__homewindow.html" title="Класс для модульного тестирования компонента HomeWindow." alt="" coords="124,259,250,285"/>
+<area shape="poly" id="edge10_Node000000_Node000006" title=" " alt="" coords="59,170,87,208,124,245,144,256,141,261,121,249,83,212,55,173"/>
+</map>

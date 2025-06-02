@@ -1,0 +1,13 @@
+<map id="ClientInterface/homewindow.h" name="ClientInterface/homewindow.h">
+<area shape="rect" id="Node000001" title="Описание интерфейса главного окна (класс HomeWindow)." alt="" coords="489,5,686,32"/>
+<area shape="rect" id="Node000002" href="$authregform_8cpp.html" title="Файл реализации форм авторизации и регистрации." alt="" coords="5,104,210,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="474,37,352,56,223,83,144,106,142,101,222,77,351,51,473,32"/>
+<area shape="rect" id="Node000003" href="$homewindow_8cpp.html" title="Реализация класса HomeWindow." alt="" coords="234,104,445,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="542,40,373,106,371,101,540,35"/>
+<area shape="rect" id="Node000004" href="$moc__homewindow_8cpp.html" title="Автоматически сгенерированный файл метаобъекта для класса HomeWindow." alt="" coords="468,80,707,155"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="590,48,590,79,585,79,585,48"/>
+<area shape="rect" id="Node000005" href="$tst__first_8cpp.html" title="Тестирование функционала окна HomeWindow." alt="" coords="731,96,868,139"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="630,36,755,93,753,98,628,41"/>
+<area shape="rect" id="Node000006" href="$test__homewindow_8cpp.html" title="Тестирование компонента HomeWindow." alt="" coords="892,96,1067,139"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="680,33,778,52,882,77,929,93,927,98,880,83,777,57,679,38"/>
+</map>

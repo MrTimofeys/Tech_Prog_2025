@@ -1,0 +1,9 @@
+<map id="ClientInterface/funcsforclient.h" name="ClientInterface/funcsforclient.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл с функциями для авторизации и регистрации клиента." alt="" coords="30,5,230,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,71,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,35,67,73,64,68,112,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="95,80,165,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,33,133,64,127,64,127,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="189,80,258,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="148,30,197,68,194,73,145,35"/>
+</map>
