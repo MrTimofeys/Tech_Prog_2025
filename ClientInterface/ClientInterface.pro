@@ -15,8 +15,7 @@ SOURCES += \
     formsmanager.cpp \
     mainwindow.cpp \
     clientmanager.cpp \
-    homewindow.cpp \
-    equationsolver.cpp \
+    homewindow.cpp
 
 HEADERS += \
     authregform.h \
@@ -24,8 +23,7 @@ HEADERS += \
     funcsforclient.h \
     mainwindow.h \
     clientmanager.h \
-    homewindow.h \
-    equationsolver.h
+    homewindow.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
