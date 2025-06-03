@@ -1,0 +1,5 @@
+<map id="ClientManager::solveEquation" name="ClientManager::solveEquation">
+<area shape="rect" id="Node000001" title="Решить уравнение на сервере." alt="" coords="5,5,201,32"/>
+<area shape="rect" id="Node000002" href="$class_client_manager.html#a8b68d6ccc61477be3e5f90760434b4b9" title="Проверить, установлено ли соединение с сервером." alt="" coords="249,5,435,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,16,233,16,233,21,201,21"/>
+</map>

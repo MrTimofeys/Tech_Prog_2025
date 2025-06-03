@@ -1,0 +1,14 @@
+<map id="ClientInterface/formsmanager.h" name="ClientInterface/formsmanager.h">
+<area shape="rect" id="Node000001" title="Описание класса FormsManager, который управляет отображением форм авторизации/регистрации и главного ..." alt="" coords="5,5,210,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="13,155,119,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,34,65,54,46,81,42,96,43,111,53,141,48,142,38,112,37,95,41,79,61,51,85,30"/>
+<area shape="rect" id="Node000003" href="$authregform_8h.html" title="Заголовочный файл форм авторизации и регистрации." alt="" coords="184,80,285,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,30,200,70,198,74,128,35"/>
+<area shape="rect" id="Node000006" href="$mainwindow_8h.html" title="Описание основного окна приложения (класс MainWindow)." alt="" coords="56,80,159,107"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="110,33,110,64,105,64,105,33"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="151,155,219,181"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="228,109,204,143,200,140,223,106"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="243,155,308,181"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="244,106,263,140,259,143,239,109"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="103,109,83,143,78,140,98,106"/>
+</map>

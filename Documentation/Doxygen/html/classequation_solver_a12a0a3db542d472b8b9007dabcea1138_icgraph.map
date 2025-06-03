@@ -1,0 +1,11 @@
+<map id="equationSolver::phi_quadratic" name="equationSolver::phi_quadratic">
+<area shape="rect" id="Node000001" title="Квадратичная функция для итерационного метода" alt="" coords="991,5,1123,48"/>
+<area shape="rect" id="Node000002" href="$classequation_solver.html#abab7d0cc0f7be9a9313639be9a5dd320" title="Решает уравнение итерационным методом" alt="" coords="749,5,943,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="975,29,943,29,943,24,975,24"/>
+<area shape="rect" id="Node000003" href="$class_my_tcp_server.html#ab4a64d2eab985d723090963f5c8a2882" title="Обработчик входящих данных" alt="" coords="505,13,701,40"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="733,29,702,29,702,24,733,24"/>
+<area shape="rect" id="Node000004" href="$class_my_tcp_server.html#a0ba7316ffe1a26c57fabde9e74b6c8dc" title="Обработчик нового подключения" alt="" coords="237,13,457,40"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="489,29,458,29,458,24,489,24"/>
+<area shape="rect" id="Node000005" href="$class_my_tcp_server.html#a51c997b208c04a8090c6f588469c8b12" title="Конструктор класса MyTcpServer." alt="" coords="5,13,189,40"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="221,29,189,29,189,24,221,24"/>
+</map>

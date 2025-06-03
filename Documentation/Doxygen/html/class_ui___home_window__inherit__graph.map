@@ -1,0 +1,5 @@
+<map id="Ui_HomeWindow" name="Ui_HomeWindow">
+<area shape="rect" id="Node000001" title="Класс, описывающий пользовательский интерфейс главного окна приложения" alt="" coords="6,5,129,32"/>
+<area shape="rect" id="Node000002" href="$class_ui_1_1_home_window.html" title="Класс&#45;наследник Ui_HomeWindow для использования в коде приложения" alt="" coords="5,80,130,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="70,48,70,80,65,80,65,48"/>
+</map>

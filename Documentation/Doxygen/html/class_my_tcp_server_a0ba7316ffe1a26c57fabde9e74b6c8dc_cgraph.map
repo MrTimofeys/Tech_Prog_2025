@@ -1,0 +1,17 @@
+<map id="MyTcpServer::slotNewConnection" name="MyTcpServer::slotNewConnection">
+<area shape="rect" id="Node000001" title="Обработчик нового подключения" alt="" coords="5,56,226,83"/>
+<area shape="rect" id="Node000002" href="$class_my_tcp_server.html#a3e040c49dbefd65b9a58ab662fc9f7a2" title="Обработчик отключения клиента" alt="" coords="274,31,515,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,57,258,54,258,59,226,62"/>
+<area shape="rect" id="Node000003" href="$class_my_tcp_server.html#ab4a64d2eab985d723090963f5c8a2882" title="Обработчик входящих данных" alt="" coords="296,81,492,108"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,77,281,82,281,87,226,82"/>
+<area shape="rect" id="Node000004" href="$classequation_solver.html#abab7d0cc0f7be9a9313639be9a5dd320" title="Решает уравнение итерационным методом" alt="" coords="563,73,756,116"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="493,92,547,92,547,97,493,97"/>
+<area shape="rect" id="Node000005" href="$homewindow_8cpp.html#ad384c9b1f47b29100c519ede52000f65" title="Функция phi для экспоненциального уравнения: exp(&#45;x)." alt="" coords="865,5,904,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="721,70,803,41,850,26,852,31,805,47,723,75"/>
+<area shape="rect" id="Node000006" href="$classequation_solver.html#ad556c59ef7a6de3b53e3d582de0b14fe" title="Косинусная функция для итерационного метода" alt="" coords="804,56,965,83"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="756,81,789,77,789,83,757,86"/>
+<area shape="rect" id="Node000007" href="$classequation_solver.html#a362aca455505cc2ecf6fb59abd416226" title="Экспоненциальная функция для итерационного метода" alt="" coords="804,107,965,133"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="757,103,789,107,789,112,756,108"/>
+<area shape="rect" id="Node000008" href="$classequation_solver.html#a12a0a3db542d472b8b9007dabcea1138" title="Квадратичная функция для итерационного метода" alt="" coords="818,157,951,200"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="720,114,812,149,810,154,718,119"/>
+</map>

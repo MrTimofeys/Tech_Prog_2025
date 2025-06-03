@@ -1,0 +1,13 @@
+<map id="MyTcpServer::slotServerRead" name="MyTcpServer::slotServerRead">
+<area shape="rect" id="Node000001" title="Обработчик входящих данных" alt="" coords="5,81,202,108"/>
+<area shape="rect" id="Node000002" href="$classequation_solver.html#abab7d0cc0f7be9a9313639be9a5dd320" title="Решает уравнение итерационным методом" alt="" coords="250,73,443,116"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,92,234,92,234,97,202,97"/>
+<area shape="rect" id="Node000003" href="$homewindow_8cpp.html#ad384c9b1f47b29100c519ede52000f65" title="Функция phi для экспоненциального уравнения: exp(&#45;x)." alt="" coords="552,5,590,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="408,70,490,41,537,26,538,31,492,47,409,75"/>
+<area shape="rect" id="Node000004" href="$classequation_solver.html#ad556c59ef7a6de3b53e3d582de0b14fe" title="Косинусная функция для итерационного метода" alt="" coords="491,56,651,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="443,81,475,77,476,83,443,86"/>
+<area shape="rect" id="Node000005" href="$classequation_solver.html#a362aca455505cc2ecf6fb59abd416226" title="Экспоненциальная функция для итерационного метода" alt="" coords="491,107,651,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="443,103,476,107,475,112,443,108"/>
+<area shape="rect" id="Node000006" href="$classequation_solver.html#a12a0a3db542d472b8b9007dabcea1138" title="Квадратичная функция для итерационного метода" alt="" coords="505,157,637,200"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="406,114,499,149,497,154,405,119"/>
+</map>

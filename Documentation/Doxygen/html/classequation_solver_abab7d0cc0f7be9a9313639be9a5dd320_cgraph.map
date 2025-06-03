@@ -1,0 +1,11 @@
+<map id="equationSolver::solveIterationMethod" name="equationSolver::solveIterationMethod">
+<area shape="rect" id="Node000001" title="Решает уравнение итерационным методом" alt="" coords="5,73,199,116"/>
+<area shape="rect" id="Node000002" href="$homewindow_8cpp.html#ad384c9b1f47b29100c519ede52000f65" title="Функция phi для экспоненциального уравнения: exp(&#45;x)." alt="" coords="308,5,346,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,70,246,41,292,26,294,31,248,47,165,75"/>
+<area shape="rect" id="Node000003" href="$classequation_solver.html#ad556c59ef7a6de3b53e3d582de0b14fe" title="Косинусная функция для итерационного метода" alt="" coords="247,56,407,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,81,231,77,231,83,199,86"/>
+<area shape="rect" id="Node000004" href="$classequation_solver.html#a362aca455505cc2ecf6fb59abd416226" title="Экспоненциальная функция для итерационного метода" alt="" coords="247,107,407,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="199,103,231,107,231,112,199,108"/>
+<area shape="rect" id="Node000005" href="$classequation_solver.html#a12a0a3db542d472b8b9007dabcea1138" title="Квадратичная функция для итерационного метода" alt="" coords="261,157,393,200"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="162,114,254,149,252,154,160,119"/>
+</map>

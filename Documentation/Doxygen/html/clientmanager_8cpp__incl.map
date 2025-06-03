@@ -1,0 +1,19 @@
+<map id="ClientInterface/clientmanager.cpp" name="ClientInterface/clientmanager.cpp">
+<area shape="rect" id="Node000001" title="Реализация класса ClientManager." alt="" coords="284,5,500,32"/>
+<area shape="rect" id="Node000002" href="$clientmanager_8h.html" title="Описание класса ClientManager, который управляет клиентским соединением с сервером." alt="" coords="219,80,333,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="373,35,311,74,308,69,370,30"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="357,80,427,107"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="395,33,395,64,389,64,389,33"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="450,80,515,107"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="409,30,457,68,454,72,406,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,75,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="236,110,90,154,89,149,234,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="99,155,192,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="255,110,183,149,180,144,252,105"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="216,155,336,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="279,107,279,139,273,139,273,107"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="359,155,457,181"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="300,105,373,145,371,149,298,110"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="481,155,588,181"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="322,105,475,147,474,153,320,110"/>
+</map>

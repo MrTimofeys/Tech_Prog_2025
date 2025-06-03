@@ -1,0 +1,876 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Решение уравнений вида х = у(х) методом последовательных приближений (итерационным методом): Класс ClientManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Решение уравнений вида х = у(х) методом последовательных приближений (итерационным методом)
+   </div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Поиск" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_client_manager.html','','class_client_manager-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Класс ClientManager</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс для управления клиентским соединением с сервером.  
+ <a href="#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="clientmanager_8h_source.html">clientmanager.h</a>&gt;</code></p>
+<div class="dynheader">
+Граф наследования:ClientManager:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager__inherit__graph.svg" width="116" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса ClientManager:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager__coll__graph.svg" width="116" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-signals" class="groupheader"><a id="signals" name="signals"></a>
+Сигналы</h2></td></tr>
+<tr class="memitem:ad9131f7b0775a8cdaa9690b3460d8137" id="r_ad9131f7b0775a8cdaa9690b3460d8137"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9131f7b0775a8cdaa9690b3460d8137">connectionStatusChanged</a> (bool connected)</td></tr>
+<tr class="memdesc:ad9131f7b0775a8cdaa9690b3460d8137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал изменения статуса соединения.  <br /></td></tr>
+<tr class="memitem:a9719c89557aff68620f537e38c456243" id="r_a9719c89557aff68620f537e38c456243"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9719c89557aff68620f537e38c456243">registrationResult</a> (bool success, const QString &amp;message)</td></tr>
+<tr class="memdesc:a9719c89557aff68620f537e38c456243"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал результата регистрации пользователя.  <br /></td></tr>
+<tr class="memitem:aafa6d47d5d59e7b660ef0865a464ba51" id="r_aafa6d47d5d59e7b660ef0865a464ba51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafa6d47d5d59e7b660ef0865a464ba51">loginResult</a> (bool success, const QString &amp;message)</td></tr>
+<tr class="memdesc:aafa6d47d5d59e7b660ef0865a464ba51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал результата авторизации пользователя.  <br /></td></tr>
+<tr class="memitem:a78aa23d175db3cbcad3d627d46c555aa" id="r_a78aa23d175db3cbcad3d627d46c555aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78aa23d175db3cbcad3d627d46c555aa">verificationCodeResult</a> (bool success, const QString &amp;message)</td></tr>
+<tr class="memdesc:a78aa23d175db3cbcad3d627d46c555aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал результата отправки кода подтверждения.  <br /></td></tr>
+<tr class="memitem:aa92b3af32dffef0590a3bbd7e15f60ba" id="r_aa92b3af32dffef0590a3bbd7e15f60ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa92b3af32dffef0590a3bbd7e15f60ba">passwordResetResult</a> (bool success, const QString &amp;message)</td></tr>
+<tr class="memdesc:aa92b3af32dffef0590a3bbd7e15f60ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал результата сброса пароля.  <br /></td></tr>
+<tr class="memitem:ae2222a8ff9ab236441da540ee865a449" id="r_ae2222a8ff9ab236441da540ee865a449"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2222a8ff9ab236441da540ee865a449">equationSolved</a> (bool success, double root, const QString &amp;message)</td></tr>
+<tr class="memdesc:ae2222a8ff9ab236441da540ee865a449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сигнал результата решения уравнения.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a736ed42962d75301a80e9a59a68182d1" id="r_a736ed42962d75301a80e9a59a68182d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a736ed42962d75301a80e9a59a68182d1">solveEquation</a> (const QString &amp;functionName, double x0, double tolerance, int maxIterations)</td></tr>
+<tr class="memdesc:a736ed42962d75301a80e9a59a68182d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Решить уравнение на сервере.  <br /></td></tr>
+<tr class="memitem:ade5e0886a7d8120e8ccca221ef407df1" id="r_ade5e0886a7d8120e8ccca221ef407df1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade5e0886a7d8120e8ccca221ef407df1">connectToServer</a> (const QString &amp;host=&quot;77.222.47.216&quot;, quint16 port=33333)</td></tr>
+<tr class="memdesc:ade5e0886a7d8120e8ccca221ef407df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Установить соединение с сервером.  <br /></td></tr>
+<tr class="memitem:a04d461e2b8f6c51bd5beaf3bc5b957b4" id="r_a04d461e2b8f6c51bd5beaf3bc5b957b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04d461e2b8f6c51bd5beaf3bc5b957b4">disconnectFromServer</a> ()</td></tr>
+<tr class="memdesc:a04d461e2b8f6c51bd5beaf3bc5b957b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Разорвать соединение с сервером.  <br /></td></tr>
+<tr class="memitem:a8b68d6ccc61477be3e5f90760434b4b9" id="r_a8b68d6ccc61477be3e5f90760434b4b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b68d6ccc61477be3e5f90760434b4b9">isConnected</a> () const</td></tr>
+<tr class="memdesc:a8b68d6ccc61477be3e5f90760434b4b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверить, установлено ли соединение с сервером.  <br /></td></tr>
+<tr class="memitem:a092a44dab9d3020071e398565c15b039" id="r_a092a44dab9d3020071e398565c15b039"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a092a44dab9d3020071e398565c15b039">registerUser</a> (const QString &amp;username, const QString &amp;password, const QString &amp;email)</td></tr>
+<tr class="memdesc:a092a44dab9d3020071e398565c15b039"><td class="mdescLeft">&#160;</td><td class="mdescRight">Зарегистрировать нового пользователя.  <br /></td></tr>
+<tr class="memitem:a1a17ae5acd787b26f64d69d1056200ce" id="r_a1a17ae5acd787b26f64d69d1056200ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a17ae5acd787b26f64d69d1056200ce">loginUser</a> (const QString &amp;username, const QString &amp;password)</td></tr>
+<tr class="memdesc:a1a17ae5acd787b26f64d69d1056200ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Авторизовать пользователя.  <br /></td></tr>
+<tr class="memitem:af355cfb20b23f94b91a88d411f639eea" id="r_af355cfb20b23f94b91a88d411f639eea"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af355cfb20b23f94b91a88d411f639eea">sendVerificationCode</a> (const QString &amp;username)</td></tr>
+<tr class="memdesc:af355cfb20b23f94b91a88d411f639eea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправить код подтверждения для восстановления пароля.  <br /></td></tr>
+<tr class="memitem:af3e942aaadc4886238d41499eab01d53" id="r_af3e942aaadc4886238d41499eab01d53"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3e942aaadc4886238d41499eab01d53">resetPassword</a> (const QString &amp;username, const QString &amp;code, const QString &amp;newPassword)</td></tr>
+<tr class="memdesc:af3e942aaadc4886238d41499eab01d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сбросить пароль пользователя.  <br /></td></tr>
+<tr class="memitem:adbbaea686d916c47035b1987e1d77bdc" id="r_adbbaea686d916c47035b1987e1d77bdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbbaea686d916c47035b1987e1d77bdc">clearStoredVerificationCode</a> ()</td></tr>
+<tr class="memdesc:adbbaea686d916c47035b1987e1d77bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очистить сохранённый код подтверждения.  <br /></td></tr>
+<tr class="memitem:abd331ed36fd567f1f16892634340db2a" id="r_abd331ed36fd567f1f16892634340db2a"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd331ed36fd567f1f16892634340db2a">getStoredVerificationCode</a> () const</td></tr>
+<tr class="memdesc:abd331ed36fd567f1f16892634340db2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить сохранённый код подтверждения.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Открытые статические члены</h2></td></tr>
+<tr class="memitem:a712e826ffb83b207a1c74831fea63837" id="r_a712e826ffb83b207a1c74831fea63837"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_client_manager.html">ClientManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a712e826ffb83b207a1c74831fea63837">getInstance</a> ()</td></tr>
+<tr class="memdesc:a712e826ffb83b207a1c74831fea63837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить единственный экземпляр <a class="el" href="class_client_manager.html" title="Класс для управления клиентским соединением с сервером.">ClientManager</a>.  <br /></td></tr>
+<tr class="memitem:ab7b46dce9dbddae236185919de3c6340" id="r_ab7b46dce9dbddae236185919de3c6340"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7b46dce9dbddae236185919de3c6340">destroyInstance</a> ()</td></tr>
+<tr class="memdesc:ab7b46dce9dbddae236185919de3c6340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Уничтожить единственный экземпляр <a class="el" href="class_client_manager.html" title="Класс для управления клиентским соединением с сервером.">ClientManager</a>.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Класс для управления клиентским соединением с сервером. </p>
+<p>Отвечает за установку и разрыв соединения с сервером, отправку запросов и обработку ответов. Поддерживает регистрацию, авторизацию, восстановление пароля и решение уравнений. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientmanager_8h_source.html">clientmanager.h</a> строка <a class="el" href="clientmanager_8h_source.html#l00019">19</a></p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Методы</h2>
+<a id="adbbaea686d916c47035b1987e1d77bdc" name="adbbaea686d916c47035b1987e1d77bdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbbaea686d916c47035b1987e1d77bdc">&#9670;&#160;</a></span>clearStoredVerificationCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClientManager::clearStoredVerificationCode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Очистить сохранённый код подтверждения. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientmanager_8h_source.html">clientmanager.h</a> строка <a class="el" href="clientmanager_8h_source.html#l00119">119</a></p>
+
+</div>
+</div>
+<a id="ad9131f7b0775a8cdaa9690b3460d8137" name="ad9131f7b0775a8cdaa9690b3460d8137"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9131f7b0775a8cdaa9690b3460d8137">&#9670;&#160;</a></span>connectionStatusChanged</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClientManager::connectionStatusChanged </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>connected</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сигнал изменения статуса соединения. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connected</td><td>true, если соединение установлено, иначе false. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_ad9131f7b0775a8cdaa9690b3460d8137_icgraph.svg" width="427" height="70"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ade5e0886a7d8120e8ccca221ef407df1" name="ade5e0886a7d8120e8ccca221ef407df1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade5e0886a7d8120e8ccca221ef407df1">&#9670;&#160;</a></span>connectToServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientManager::connectToServer </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>host</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;77.222.47.216&quot;</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">quint16</td>          <td class="paramname"><span class="paramname"><em>port</em></span><span class="paramdefsep"> = </span><span class="paramdefval">33333</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Установить соединение с сервером. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">host</td><td>Адрес сервера (по умолчанию "77.222.47.216"). </td></tr>
+    <tr><td class="paramname">port</td><td>Порт сервера (по умолчанию 33333). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если соединение успешно инициировано, иначе false. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientmanager_8cpp_source.html">clientmanager.cpp</a> строка <a class="el" href="clientmanager_8cpp_source.html#l00066">66</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_ade5e0886a7d8120e8ccca221ef407df1_icgraph.svg" width="424" height="163"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab7b46dce9dbddae236185919de3c6340" name="ab7b46dce9dbddae236185919de3c6340"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7b46dce9dbddae236185919de3c6340">&#9670;&#160;</a></span>destroyInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClientManager::destroyInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Уничтожить единственный экземпляр <a class="el" href="class_client_manager.html" title="Класс для управления клиентским соединением с сервером.">ClientManager</a>. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientmanager_8cpp_source.html">clientmanager.cpp</a> строка <a class="el" href="clientmanager_8cpp_source.html#l00027">27</a></p>
+
+</div>
+</div>
+<a id="a04d461e2b8f6c51bd5beaf3bc5b957b4" name="a04d461e2b8f6c51bd5beaf3bc5b957b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04d461e2b8f6c51bd5beaf3bc5b957b4">&#9670;&#160;</a></span>disconnectFromServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClientManager::disconnectFromServer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Разорвать соединение с сервером. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="clientmanager_8cpp_source.html">clientmanager.cpp</a> строка <a class="el" href="clientmanager_8cpp_source.html#l00100">100</a></p>
+
+</div>
+</div>
+<a id="ae2222a8ff9ab236441da540ee865a449" name="ae2222a8ff9ab236441da540ee865a449"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2222a8ff9ab236441da540ee865a449">&#9670;&#160;</a></span>equationSolved</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClientManager::equationSolved </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>success</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>root</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сигнал результата решения уравнения. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">success</td><td>true, если решение найдено успешно, иначе false. </td></tr>
+    <tr><td class="paramname">root</td><td>Значение корня уравнения. </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение с результатом операции. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_ae2222a8ff9ab236441da540ee865a449_icgraph.svg" width="455" height="62"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a712e826ffb83b207a1c74831fea63837" name="a712e826ffb83b207a1c74831fea63837"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712e826ffb83b207a1c74831fea63837">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_client_manager.html">ClientManager</a> * ClientManager::getInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить единственный экземпляр <a class="el" href="class_client_manager.html" title="Класс для управления клиентским соединением с сервером.">ClientManager</a>. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Указатель на объект <a class="el" href="class_client_manager.html" title="Класс для управления клиентским соединением с сервером.">ClientManager</a>. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientmanager_8cpp_source.html">clientmanager.cpp</a> строка <a class="el" href="clientmanager_8cpp_source.html#l00016">16</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_a712e826ffb83b207a1c74831fea63837_icgraph.svg" width="440" height="288"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="abd331ed36fd567f1f16892634340db2a" name="abd331ed36fd567f1f16892634340db2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd331ed36fd567f1f16892634340db2a">&#9670;&#160;</a></span>getStoredVerificationCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ClientManager::getStoredVerificationCode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Получить сохранённый код подтверждения. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>Строка с кодом подтверждения. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientmanager_8h_source.html">clientmanager.h</a> строка <a class="el" href="clientmanager_8h_source.html#l00125">125</a></p>
+
+</div>
+</div>
+<a id="a8b68d6ccc61477be3e5f90760434b4b9" name="a8b68d6ccc61477be3e5f90760434b4b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b68d6ccc61477be3e5f90760434b4b9">&#9670;&#160;</a></span>isConnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientManager::isConnected </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверить, установлено ли соединение с сервером. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если соединение активно, иначе false. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientmanager_8cpp_source.html">clientmanager.cpp</a> строка <a class="el" href="clientmanager_8cpp_source.html#l00112">112</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_a8b68d6ccc61477be3e5f90760434b4b9_icgraph.svg" width="576" height="412"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aafa6d47d5d59e7b660ef0865a464ba51" name="aafa6d47d5d59e7b660ef0865a464ba51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafa6d47d5d59e7b660ef0865a464ba51">&#9670;&#160;</a></span>loginResult</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClientManager::loginResult </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>success</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сигнал результата авторизации пользователя. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">success</td><td>true, если авторизация успешна, иначе false. </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение с результатом операции. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_aafa6d47d5d59e7b660ef0865a464ba51_icgraph.svg" width="531" height="191"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a1a17ae5acd787b26f64d69d1056200ce" name="a1a17ae5acd787b26f64d69d1056200ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a17ae5acd787b26f64d69d1056200ce">&#9670;&#160;</a></span>loginUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientManager::loginUser </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>username</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>password</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Авторизовать пользователя. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>Имя пользователя. </td></tr>
+    <tr><td class="paramname">password</td><td>Пароль. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если запрос отправлен успешно, иначе false. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientmanager_8cpp_source.html">clientmanager.cpp</a> строка <a class="el" href="clientmanager_8cpp_source.html#l00174">174</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_a1a17ae5acd787b26f64d69d1056200ce_cgraph.svg" width="414" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_a1a17ae5acd787b26f64d69d1056200ce_icgraph.svg" width="274" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa92b3af32dffef0590a3bbd7e15f60ba" name="aa92b3af32dffef0590a3bbd7e15f60ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa92b3af32dffef0590a3bbd7e15f60ba">&#9670;&#160;</a></span>passwordResetResult</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClientManager::passwordResetResult </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>success</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сигнал результата сброса пароля. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">success</td><td>true, если пароль успешно сброшен, иначе false. </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение с результатом операции. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_aa92b3af32dffef0590a3bbd7e15f60ba_icgraph.svg" width="464" height="163"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a092a44dab9d3020071e398565c15b039" name="a092a44dab9d3020071e398565c15b039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a092a44dab9d3020071e398565c15b039">&#9670;&#160;</a></span>registerUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientManager::registerUser </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>username</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>password</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>email</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Зарегистрировать нового пользователя. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>Имя пользователя. </td></tr>
+    <tr><td class="paramname">password</td><td>Пароль. </td></tr>
+    <tr><td class="paramname">email</td><td>Email пользователя. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если запрос отправлен успешно, иначе false. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientmanager_8cpp_source.html">clientmanager.cpp</a> строка <a class="el" href="clientmanager_8cpp_source.html#l00151">151</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_a092a44dab9d3020071e398565c15b039_cgraph.svg" width="430" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_a092a44dab9d3020071e398565c15b039_icgraph.svg" width="283" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9719c89557aff68620f537e38c456243" name="a9719c89557aff68620f537e38c456243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9719c89557aff68620f537e38c456243">&#9670;&#160;</a></span>registrationResult</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClientManager::registrationResult </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>success</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сигнал результата регистрации пользователя. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">success</td><td>true, если регистрация успешна, иначе false. </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение с результатом операции. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_a9719c89557aff68620f537e38c456243_icgraph.svg" width="523" height="214"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af3e942aaadc4886238d41499eab01d53" name="af3e942aaadc4886238d41499eab01d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3e942aaadc4886238d41499eab01d53">&#9670;&#160;</a></span>resetPassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientManager::resetPassword </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>username</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>newPassword</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сбросить пароль пользователя. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>Имя пользователя. </td></tr>
+    <tr><td class="paramname">code</td><td>Код подтверждения. </td></tr>
+    <tr><td class="paramname">newPassword</td><td>Новый пароль. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если запрос отправлен успешно, иначе false. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientmanager_8cpp_source.html">clientmanager.cpp</a> строка <a class="el" href="clientmanager_8cpp_source.html#l00217">217</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_af3e942aaadc4886238d41499eab01d53_cgraph.svg" width="464" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af355cfb20b23f94b91a88d411f639eea" name="af355cfb20b23f94b91a88d411f639eea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af355cfb20b23f94b91a88d411f639eea">&#9670;&#160;</a></span>sendVerificationCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientManager::sendVerificationCode </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>username</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Отправить код подтверждения для восстановления пароля. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">username</td><td>Имя пользователя. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если запрос отправлен успешно, иначе false. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientmanager_8cpp_source.html">clientmanager.cpp</a> строка <a class="el" href="clientmanager_8cpp_source.html#l00195">195</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_af355cfb20b23f94b91a88d411f639eea_cgraph.svg" width="482" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a736ed42962d75301a80e9a59a68182d1" name="a736ed42962d75301a80e9a59a68182d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a736ed42962d75301a80e9a59a68182d1">&#9670;&#160;</a></span>solveEquation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientManager::solveEquation </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>functionName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x0</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>tolerance</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>maxIterations</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Решить уравнение на сервере. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">functionName</td><td>Имя функции/уравнения. </td></tr>
+    <tr><td class="paramname">x0</td><td>Начальное приближение. </td></tr>
+    <tr><td class="paramname">tolerance</td><td>Точность решения. </td></tr>
+    <tr><td class="paramname">maxIterations</td><td>Максимальное количество итераций. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true, если запрос отправлен успешно, иначе false. </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="clientmanager_8cpp_source.html">clientmanager.cpp</a> строка <a class="el" href="clientmanager_8cpp_source.html#l00125">125</a></p>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_a736ed42962d75301a80e9a59a68182d1_cgraph.svg" width="440" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a78aa23d175db3cbcad3d627d46c555aa" name="a78aa23d175db3cbcad3d627d46c555aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78aa23d175db3cbcad3d627d46c555aa">&#9670;&#160;</a></span>verificationCodeResult</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClientManager::verificationCodeResult </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>success</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Сигнал результата отправки кода подтверждения. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">success</td><td>true, если код успешно отправлен, иначе false. </td></tr>
+    <tr><td class="paramname">message</td><td>Сообщение с результатом операции. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="class_client_manager_a78aa23d175db3cbcad3d627d46c555aa_icgraph.svg" width="472" height="163"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li>ClientInterface/<a class="el" href="clientmanager_8h_source.html">clientmanager.h</a></li>
+<li>ClientInterface/<a class="el" href="clientmanager_8cpp_source.html">clientmanager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_client_manager.html">ClientManager</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -28,7 +28,7 @@ ClientManager::ClientManager(QObject *parent)
     connect(socket, &QTcpSocket::connected, this, &ClientManager::onConnected);
     connect(socket, &QTcpSocket::disconnected, this, &ClientManager::onDisconnected);
     connect(socket, &QTcpSocket::readyRead, this, &ClientManager::onReadyRead);
-    connect(socket, QOverload<QAbstractSocket::SocketError>::of(&QTcpSocket::error),
+    connect(socket, &QTcpSocket::errorOccurred,
             this, &ClientManager::onError);
 }
 

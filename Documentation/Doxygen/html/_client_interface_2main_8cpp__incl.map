@@ -1,0 +1,18 @@
+<map id="ClientInterface/main.cpp" name="ClientInterface/main.cpp">
+<area shape="rect" id="Node000001" title="Основной файл запуска клиента." alt="" coords="82,5,246,32"/>
+<area shape="rect" id="Node000002" href="$formsmanager_8h.html" title="Описание класса FormsManager, который управляет отображением форм авторизации/регистрации и главного ..." alt="" coords="42,80,158,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,34,123,70,119,66,151,31"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="182,80,277,107"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="177,31,210,67,206,70,173,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,229,112,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="81,109,57,129,38,156,35,170,36,186,46,215,41,217,30,187,30,170,33,154,53,125,78,105"/>
+<area shape="rect" id="Node000004" href="$authregform_8h.html" title="Заголовочный файл форм авторизации и регистрации." alt="" coords="176,155,277,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="123,105,193,144,190,149,121,110"/>
+<area shape="rect" id="Node000007" href="$mainwindow_8h.html" title="Описание основного окна приложения (класс MainWindow)." alt="" coords="48,155,152,181"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="102,107,102,139,97,139,97,107"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="143,229,211,256"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="220,183,196,218,192,215,216,180"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="236,229,300,256"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="236,181,256,215,251,217,231,183"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="95,183,75,217,71,215,90,181"/>
+</map>

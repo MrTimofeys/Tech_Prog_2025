@@ -1,0 +1,29 @@
+<map id="Tests/Test/Tests/build/Desktop_Qt_5_15_16_static_MinGW_w64_MINGW64_MSYS2&#45;Debug/ui_homewindow.h" name="Tests/Test/Tests/build/Desktop_Qt_5_15_16_static_MinGW_w64_MINGW64_MSYS2&#45;Debug/ui_homewindow.h">
+<area shape="rect" id="Node000001" title="Заголовочный файл, содержащий описание пользовательского интерфейса главного окна приложения" alt="" coords="1000,5,1224,80"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,128,123,155"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="999,53,622,81,383,103,139,130,138,125,382,98,621,76,999,48"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="147,128,309,155"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1000,58,325,130,324,125,999,52"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="332,128,494,155"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1000,62,511,129,510,124,999,57"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="518,128,684,155"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1000,68,684,127,683,122,999,63"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="709,128,864,155"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1000,80,844,126,843,121,999,75"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="888,128,1016,155"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1052,83,987,122,984,118,1050,78"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="1040,128,1184,155"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1115,80,1115,112,1109,112,1109,80"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="1208,128,1381,155"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1183,78,1259,118,1256,123,1180,83"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="1405,128,1555,155"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1225,71,1418,121,1416,126,1224,76"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="1579,128,1744,155"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1225,61,1575,122,1574,127,1224,66"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1768,128,1923,155"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="1225,56,1753,125,1752,130,1224,61"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1946,128,2115,155"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="1225,52,1931,125,1930,130,1224,57"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="2139,128,2277,155"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="1225,48,1618,77,1868,99,2124,125,2123,130,1867,104,1617,82,1224,54"/>
+</map>

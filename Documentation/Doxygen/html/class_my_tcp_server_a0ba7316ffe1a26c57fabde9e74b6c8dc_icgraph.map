@@ -1,0 +1,5 @@
+<map id="MyTcpServer::slotNewConnection" name="MyTcpServer::slotNewConnection">
+<area shape="rect" id="Node000001" title="Обработчик нового подключения" alt="" coords="237,5,457,32"/>
+<area shape="rect" id="Node000002" href="$class_my_tcp_server.html#a51c997b208c04a8090c6f588469c8b12" title="Конструктор класса MyTcpServer." alt="" coords="5,5,189,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,21,189,21,189,16,221,16"/>
+</map>

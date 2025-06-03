@@ -1,0 +1,28 @@
+<map id="Server/equationsolver.h" name="Server/equationsolver.h">
+<area shape="rect" id="Node000001" title="Решение уравнений итерационными методами" alt="" coords="1030,5,1188,32"/>
+<area shape="rect" id="Node000002" href="$homewindow_8h.html" title="Описание интерфейса главного окна (класс HomeWindow)." alt="" coords="596,80,792,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1022,38,767,82,766,77,1021,33"/>
+<area shape="rect" id="Node000008" href="$equationsolver_8cpp.html" title="Реализация решения уравнений итерационными методами" alt="" coords="961,80,1134,107"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1090,46,1060,81,1056,78,1086,42"/>
+<area shape="rect" id="Node000009" href="$mytcpserver_8cpp.html" title="Реализация TCP сервера для регистрации, аутентификации, восстановления пароля и решения уравнений." alt="" coords="1091,179,1252,205"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1129,44,1149,79,1165,133,1173,178,1167,179,1160,135,1144,81,1125,46"/>
+<area shape="rect" id="Node000010" href="$mytcpserver_8h.html" title="Заголовочный файл для класса MyTcpServer, реализующего TCP&#45;сервер для регистрации и авторизации польз..." alt="" coords="1322,80,1469,107"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1174,34,1346,77,1345,82,1173,39"/>
+<area shape="rect" id="Node000003" href="$authregform_8cpp.html" title="Файл реализации форм авторизации и регистрации." alt="" coords="5,179,210,205"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="581,106,411,125,316,139,223,157,143,181,141,175,222,152,315,134,410,120,580,101"/>
+<area shape="rect" id="Node000004" href="$homewindow_8cpp.html" title="Реализация класса HomeWindow." alt="" coords="234,179,445,205"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="627,113,458,157,380,181,378,175,456,152,626,108"/>
+<area shape="rect" id="Node000005" href="$moc__homewindow_8cpp.html" title="Автоматически сгенерированный файл метаобъекта для класса HomeWindow." alt="" coords="468,155,707,229"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="671,119,630,156,626,152,667,115"/>
+<area shape="rect" id="Node000006" href="$tst__first_8cpp.html" title="Тестирование функционала окна HomeWindow." alt="" coords="731,171,868,213"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="721,115,779,168,775,172,717,119"/>
+<area shape="rect" id="Node000007" href="$test__homewindow_8cpp.html" title="Тестирование компонента HomeWindow." alt="" coords="892,171,1067,213"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="750,109,880,152,924,168,923,173,879,157,748,114"/>
+<area shape="poly" id="edge12_Node000010_Node000009" title=" " alt="" coords="1354,115,1202,181,1200,176,1352,111"/>
+<area shape="rect" id="Node000011" href="$build_2_desktop___qt__6__8__2___min_g_w__64__bit-_debug_2debug_2moc___my_tcp_server_8cpp.html" title="Автоматически сгенерированный файл метаобъекта для класса MyTcpServer." alt="" coords="1275,163,1516,221"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="1398,122,1398,162,1393,162,1393,122"/>
+<area shape="rect" id="Node000012" href="$_server_2main_8cpp.html" title="Основной файл запуска сервера." alt="" coords="1540,179,1656,205"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="1439,111,1529,152,1575,176,1573,180,1526,157,1437,116"/>
+<area shape="rect" id="Node000013" href="$ests_2build_2_desktop___qt__6__8__2___min_g_w__64__bit-_debug_2debug_2moc___my_tcp_server_8cpp.html" title="Автоматически сгенерированный файл метаобъекта для класса MyTcpServer." alt="" coords="1680,163,1916,221"/>
+<area shape="poly" id="edge13_Node000010_Node000013" title=" " alt="" coords="1473,108,1669,152,1698,159,1697,165,1668,157,1472,113"/>
+</map>

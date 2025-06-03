@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include <QtTest>
-#include "C:/Users/redmi/Desktop/Tech_Prog_2025/Server/mytcpserver.h"
+#include "../Server/mytcpserver.h"
 
 class TestMyTcpServer : public QObject
 {

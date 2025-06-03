@@ -1,0 +1,8 @@
+<map id="HomeWindow::HomeWindow" name="HomeWindow::HomeWindow">
+<area shape="rect" id="Node000001" title="Конструктор главного окна." alt="" coords="5,31,199,57"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="61,32,53,22,58,12,75,6,102,4,132,7,147,13,145,18,130,12,102,9,76,11,62,16,59,21,65,29"/>
+<area shape="rect" id="Node000002" href="$class_client_manager.html#ae2222a8ff9ab236441da540ee865a449" title="Сигнал результата решения уравнения." alt="" coords="247,5,449,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,31,231,28,231,33,199,37"/>
+<area shape="rect" id="Node000003" href="$class_client_manager.html#a712e826ffb83b207a1c74831fea63837" title="Получить единственный экземпляр ClientManager." alt="" coords="257,56,438,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,51,242,56,241,61,199,57"/>
+</map>

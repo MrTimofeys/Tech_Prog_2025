@@ -1,0 +1,13 @@
+<map id="ClientManager::registrationResult" name="ClientManager::registrationResult">
+<area shape="rect" id="Node000001" title="Сигнал результата регистрации пользователя." alt="" coords="340,97,517,140"/>
+<area shape="rect" id="Node000002" href="$class_auth_reg_form.html#a7ec2ba2a7980453c629e141a90602e68" title="Конструктор формы авторизации и регистрации." alt="" coords="97,29,288,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="345,95,236,59,237,54,346,89"/>
+<area shape="rect" id="Node000003" href="$funcsforclient_8cpp.html#a9638764c61635aa7172dc25ef99ce281" title="Функция регистрации нового пользователя." alt="" coords="5,105,45,132"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="325,121,45,121,45,116,325,116"/>
+<area shape="rect" id="Node000004" href="$class_client_manager.html#a092a44dab9d3020071e398565c15b039" title="Зарегистрировать нового пользователя." alt="" coords="100,131,284,157"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="325,132,285,137,285,131,325,127"/>
+<area shape="rect" id="Node000005" href="$class_auth_reg_form.html#a8b95ad00c5d29338f850a0f179b12078" title="Деструктор формы." alt="" coords="93,181,292,208"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="360,148,293,172,253,183,251,178,291,167,358,143"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="221,16,211,10,192,8,175,10,166,15,164,20,168,28,163,30,158,21,162,11,174,5,192,3,213,5,223,12"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="85,130,45,124,46,119,86,125"/>
+</map>

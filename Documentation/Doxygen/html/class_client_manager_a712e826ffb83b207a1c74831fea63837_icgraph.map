@@ -1,0 +1,15 @@
+<map id="ClientManager::getInstance" name="ClientManager::getInstance">
+<area shape="rect" id="Node000001" title="Получить единственный экземпляр ClientManager." alt="" coords="253,155,434,181"/>
+<area shape="rect" id="Node000002" href="$funcsforclient_8cpp.html#ae14792135403f186fb2c51f377b515ab" title="Функция авторизации пользователя." alt="" coords="82,5,128,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="319,145,269,94,238,68,203,46,165,31,128,24,129,19,166,26,206,42,241,64,273,90,323,141"/>
+<area shape="rect" id="Node000003" href="$class_auth_reg_form.html#a7ec2ba2a7980453c629e141a90602e68" title="Конструктор формы авторизации и регистрации." alt="" coords="9,80,201,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="291,151,204,121,164,110,165,105,205,116,293,146"/>
+<area shape="rect" id="Node000004" href="$class_home_window.html#a119edacd94a83af70a8e1fb1e6aff0d8" title="Конструктор главного окна." alt="" coords="8,155,202,181"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="237,171,202,171,202,165,237,165"/>
+<area shape="rect" id="Node000005" href="$funcsforclient_8cpp.html#a9638764c61635aa7172dc25ef99ce281" title="Функция регистрации нового пользователя." alt="" coords="85,205,125,232"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="263,188,126,217,125,212,262,183"/>
+<area shape="rect" id="Node000006" href="$class_auth_reg_form.html#a8b95ad00c5d29338f850a0f179b12078" title="Деструктор формы." alt="" coords="5,256,205,283"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="309,192,261,220,206,246,171,258,169,253,204,242,259,215,307,188"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="146,68,132,61,105,59,80,61,66,65,63,71,69,78,65,81,58,71,63,61,79,55,105,53,134,56,149,63"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="146,142,132,136,105,133,80,135,66,140,63,145,69,153,65,156,58,146,63,136,79,130,105,128,134,131,149,137"/>
+</map>

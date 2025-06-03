@@ -4,7 +4,8 @@ CONFIG += c++17 console
 TEMPLATE = app
 TARGET = tst_first
 
-# Подключаем твои файлы
+QT += network
+
 INCLUDEPATH += ../../../ClientInterface
 
 SOURCES += \

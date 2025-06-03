@@ -1,0 +1,33 @@
+<map id="Tests/Test/Tests/build/Desktop_Qt_5_15_16_static_MinGW_w64_MINGW64_MSYS2&#45;Debug/debug/moc_homewindow.cpp" name="Tests/Test/Tests/build/Desktop_Qt_5_15_16_static_MinGW_w64_MINGW64_MSYS2&#45;Debug/debug/moc_homewindow.cpp">
+<area shape="rect" id="Node000001" title="Автоматически сгенерированный файл метаобъекта для класса HomeWindow." alt="" coords="263,5,502,80"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="122,136,190,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="304,83,198,131,196,127,301,78"/>
+<area shape="rect" id="Node000003" href="$homewindow_8h.html" title="Описание интерфейса главного окна (класс HomeWindow)." alt="" coords="215,128,377,171"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="354,82,324,118,320,115,350,79"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="401,136,540,163"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="415,79,452,122,448,126,411,82"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="564,136,703,163"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="472,78,590,127,588,132,470,83"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,219,112,245"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="236,174,111,216,110,211,234,169"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="136,219,243,245"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="270,173,220,211,216,207,267,169"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="267,219,324,245"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="298,171,298,203,293,203,293,171"/>
+<area shape="rect" id="Node000007" href="$equationsolver_8h.html" title="Решение уравнений итерационными методами" alt="" coords="348,219,465,245"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="326,169,379,207,375,212,323,173"/>
+<area shape="rect" id="Node000009" href="$clientmanager_8h.html" title="Описание класса ClientManager, который управляет клиентским соединением с сервером." alt="" coords="583,219,696,245"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="378,167,572,212,570,217,377,172"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="326,293,391,320"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="400,247,377,282,373,279,396,244"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="416,293,485,320"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="608,248,499,290,497,285,606,243"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="509,293,602,320"/>
+<area shape="poly" id="edge10_Node000009_Node000011" title=" " alt="" coords="627,248,584,285,580,281,623,244"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="627,293,746,320"/>
+<area shape="poly" id="edge11_Node000009_Node000012" title=" " alt="" coords="650,244,673,279,668,282,646,247"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="770,293,867,320"/>
+<area shape="poly" id="edge12_Node000009_Node000013" title=" " alt="" coords="672,243,774,285,772,290,670,248"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="892,293,999,320"/>
+<area shape="poly" id="edge13_Node000009_Node000014" title=" " alt="" coords="694,243,878,287,876,292,693,249"/>
+</map>
