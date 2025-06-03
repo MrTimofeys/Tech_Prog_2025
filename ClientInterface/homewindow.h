@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include <QMessageBox>
 #include <cmath>
-// #include "equationsolver.h"
 #include "clientmanager.h"
 
 using namespace std;
@@ -28,18 +27,9 @@ private slots:
 
 private:
     Ui::HomeWindow *ui;
-    // equationSolver solver;
     
     // Вспомогательная функция для проверки ввода
     bool validateInput(double &x0, double &tolerance, int &maxIterations);
-    
-    // Функции для решения
-    static double phi_exp(double x) { return exp(-x); }
-    static double phi_quadratic(double x) { return (x*x + 6.0) / 5.0; }
-    static double phi_cos(double x) { return 0.5 * cos(x); }
-    
-    // Указатель на текущую функцию
-    double (*currentPhi)(double);
     
     // Обновление начального приближения в зависимости от выбранной функции
     void updateInitialValue(int functionIndex);

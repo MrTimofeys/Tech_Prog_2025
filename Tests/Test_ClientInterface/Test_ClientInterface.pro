@@ -6,16 +6,13 @@ TEMPLATE = app
 
 INCLUDEPATH += ../ClientInterface
 
-
 SOURCES += \
     test_homewindow.cpp \
     test_homewindow.cpp \
-    ../ClientInterface/homewindow.cpp \
-    ../ClientInterface/equationsolver.cpp
+    ../ClientInterface/homewindow.cpp
 
 HEADERS += \
-    ../ClientInterface/homewindow.h \
-    ../ClientInterface/equationsolver.h
+    ../ClientInterface/homewindow.h
 
 FORMS += \
     ../ClientInterface/homewindow.ui

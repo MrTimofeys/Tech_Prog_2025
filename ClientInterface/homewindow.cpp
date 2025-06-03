@@ -3,19 +3,9 @@
 #include <QMessageBox>
 #include <cmath>
 
-// Функция exp(-x) выбрана потому что:
-// 1. Имеет единственное решение x ≈ 0.567
-// 2. Метод итераций гарантированно сходится для любого начального приближения
-// 3. Производная функции всегда меньше 1 по модулю
-// 4. Решение легко проверить
-double phi(double x) {
-    return exp(-x);
-}
-
 HomeWindow::HomeWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::HomeWindow)
-    , currentPhi(&HomeWindow::phi_exp) // По умолчанию используем exp(-x)
 {
     ui->setupUi(this);
     this->setWindowTitle("Решение уравнений методом последовательных приближений");
@@ -39,15 +29,12 @@ void HomeWindow::updateInitialValue(int functionIndex)
     switch(functionIndex) {
         case 0: // exp(-x)
             ui->lineEdit_x0->setText("0.0");
-            currentPhi = &HomeWindow::phi_exp;
             break;
         case 1: // (x² + 6)/5
             ui->lineEdit_x0->setText("1.0");
-            currentPhi = &HomeWindow::phi_quadratic;
             break;
         case 2: // 0.5 * cos(x)
             ui->lineEdit_x0->setText("0.0");
-            currentPhi = &HomeWindow::phi_cos;
             break;
     }
 }
@@ -84,27 +71,6 @@ bool HomeWindow::validateInput(double &x0, double &tolerance, int &maxIterations
     
     return true;
 }
-
-// void HomeWindow::on_pushButton_solve_clicked()
-// {
-//     double x0, tolerance;
-//     int maxIterations;
-    
-//     // Проверяем корректность ввода
-//     if (!validateInput(x0, tolerance, maxIterations)) {
-//         return;
-//     }
-    
-//     // Решаем уравнение
-//     double result = solver.solveIterationMethod(currentPhi, x0, tolerance, maxIterations);
-    
-//     // Выводим результат
-//     if (std::isnan(result)) {
-//         ui->label_result->setText("Решение не найдено за указанное число итераций");
-//     } else {
-//         ui->label_result->setText(QString("Решение: x = %1").arg(result, 0, 'g', 10));
-//     }
-// }
 
 void HomeWindow::on_pushButton_solve_clicked()
 {
